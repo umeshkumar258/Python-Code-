@@ -14,4 +14,7 @@ print(c+d)
 a = float(input("Enter the float number: "))
 print(type(a))
 
+new = int(input("Enter the number : "))
+print(new)
+
 
