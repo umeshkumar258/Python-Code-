@@ -1,15 +1,11 @@
 a = "umesh"
-print(a,type(a))
-
 b = 3
-print(b,type(b))
-
 c = 49.48
-print(c,type(c))
-
 d = True
-print(d,type(d))
-
 e = None
-print(e,type(e))
 
+print("Value:", a, " | Type:", type(a))
+print("Value:", b, " | Type:", type(b))
+print("Value:", c, " | Type:", type(c))
+print("Value:", d, " | Type:", type(d))
+print("Value:", e, " | Type:", type(e))
