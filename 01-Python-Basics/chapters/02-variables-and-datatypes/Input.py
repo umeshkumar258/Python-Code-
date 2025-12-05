@@ -1,20 +1,18 @@
-# a = int(input("Enter your number :"))
+# Taking two integers and printing their sum
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Sum =", a + b)
 
-# b = int(input("Enter your number :"))
+# Taking user input as text (string)
+c = input("Enter first value: ")
+d = input("Enter second value: ")
+print("Concatenated result =", c + d)
 
-# print(a+b)
+# Taking a float number
+x = float(input("Enter a float number: "))
+print("Type of x is:", type(x))
 
-
-c = input("enter your the number:")
-
-d = input("enter your the number:")
-
-print(c+d)
-
-a = float(input("Enter the float number: "))
-print(type(a))
-
-new = int(input("Enter the number : "))
-print(new)
-
+# Taking an integer number
+y = int(input("Enter an integer: "))
+print("You entered:", y)
 
