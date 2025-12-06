@@ -1,7 +1,10 @@
-first = int(input("Enter the numeber: "))
+year = int(input("Enter a year: "))
 
-if(first % 400 == 0 or (first % 100 != 0 and first % 4 == 0 )):
-    print("it is leap year")
+# Leap year rule:
+# ✔ divisible by 400 → leap year
+# ✔ divisible by 4 but not by 100 → leap year
 
+if (year % 400 == 0) or (year % 100 != 0 and year % 4 == 0):
+    print(f"{year} is a leap year.")
 else:
-    print("it is not ")
+    print(f"{year} is not a leap year.")
