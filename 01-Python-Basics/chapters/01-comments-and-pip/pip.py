@@ -1,21 +1,14 @@
-# flask and django are modules 
-# we have to use pip to install these modules 
+# Flask and Django are external Python frameworks
+# We install such external modules using pip
 
+import pyjokes  # external third-party module
 
+print("Printing jokes...")
+joke = pyjokes.get_joke()  # Fetch a random joke
+print(f"Joke: {joke}")
 
-
-
-import pyjokes    # it is an external module
-
-print("Printing jokes")
-print("getting jokes")
-joke = pyjokes.get_joke()  # it is a function
-print(joke)
-
-
-# REPL read evluate print loop
-# This is compund
-
+# REPL = Read, Evaluate, Print, Loop
+# Python terminal works as a REPL
 
 from datetime import datetime, timedelta  
 
@@ -31,5 +24,6 @@ print(f"Custom date: {custom_date}")
 new_date = now + timedelta(days=5)
 print(f"Date after 5 days: {new_date}")
 
-a = "umesh"
-print(f"The name is :{a}")
+# Example variable usage
+name = "Umesh"
+print(f"The name is: {name}")
