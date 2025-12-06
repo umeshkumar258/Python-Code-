@@ -1,43 +1,40 @@
- #OPERATORS IN PYTHON
+# OPERATORS IN PYTHON
 
-# 1. Arithmetic operators: +, -, *, / etc.
+# 1. Arithmetic Operators: +, -, *, /, %, **, //
 
-# 2. Assignment operators: =, +=, -= etc.
 e = 3
-e += 8
-e *= 6
-e /= 29
+e += 8      # e = 3 + 8 = 11
+e *= 6      # e = 11 * 6 = 66
+e /= 29     # e = 66 / 29 (result is float)
 
-print(e)
+print("Value of e =", e)
 
 
-# 3. Comparison operators: ==, >, >=, <, != etc.
-a = 1==1
-print(a)
+# 2. Comparison Operators: ==, >, >=, <, != etc.
+
+a = (1 == 1)
+print("Is 1 equal to 1? ->", a)
 
 b = 38
 c = 33
-print(b>=c)
+print("Is b >= c? ->", b >= c)
 
-# return value always boolen
+# Comparison operators always return boolean values
 
 
+# 3. Logical Operators: and, or, not
 
-# 4. Logical operators: and, or, not
+g = True or False
+print("True or False =", g)
 
-g =  True or False
-print(g)
-
-print("True or False is ", True or False)
-print("True or  is True ", True or True)
-
+print("True or False =", True or False)
+print("True or True =", True or True)
 
 r = True and False
-print(r)
+print("True and False =", r)
 
 y = not False
-print(y)
+print("not False =", y)
 
 z = True and False
-print(z)
-
+print("True and False again =", z)
