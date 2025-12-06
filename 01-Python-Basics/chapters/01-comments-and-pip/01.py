@@ -1,21 +1,19 @@
+# Printing welcome messages
 print("Hello Umesh")
+print("Hello Umesh, welcome to Python learning!")
 
-
-# i am started my new journey now with help of code with harry
-
-
-"""i am umesh kumar jb 
-i do my engineering in reva university
+"""
+I am Umesh Kumar JB.
+I am pursuing engineering at REVA University.
 """
 
+# Taking user input
+a = int(input("Enter a number: "))
+print("You entered:", a, "| Type:", type(a))
 
-print("Hello umesh came of pyton learning")
-
-a = int(input("Entert the number:"))
-print(a,type(a))
-
-print("umesh is continuesly learining")
+print("Umesh is continuously learning!")
 
 '''
-this is mutilti line comments
+This is a multi–line comment
+explaining something in the program.
 '''
