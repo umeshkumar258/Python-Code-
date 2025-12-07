@@ -1,38 +1,14 @@
-# name = "harry"
+name = "harry"
 
-# print(len(name))
+print("Length:", len(name))                # number of characters
+print("Capitalize:", name.capitalize())    # first letter capital
+print("Ends with 'ry':", name.endswith("ry"))
+print("Starts with 'h':", name.startswith("h"))
+print("Count of 'h':", name.count("h"))
+print("Index of 'r':", name.find("r"))     # find returns index
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Replace name:", name.replace("harry", "umesh"))
 
-# print(name.capitalize())
-
-# print(name.endswith("ry"))
-
-# print(name.startswith("h"))
-
-# print(name.count("h"))
-
-# print(name.find("r"))
-
-# print(name.upper())
-
-# print(name.lower())
-
-
-# print(name.replace("harry","umesh"))
-
-# print(name , type(name))
-
-
-
-# print(name.find("h"))
-
-
-
-
-
-
-
-print("chnna reddy")
-
-a = 38
-b = 39
-print(a+ b)
+print("Original:", name, "| Type:", type(name))
+print("Index of 'h':", name.find("h"))
