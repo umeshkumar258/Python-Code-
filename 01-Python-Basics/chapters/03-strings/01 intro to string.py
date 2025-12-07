@@ -1,24 +1,22 @@
+# All of these represent strings
 a = "umesh"
 b = 'umesh'
 c = '''umesh'''
 
-# all these output is same and all these considere is string
+# String slicing
+name_short = a[:3]   # Same as a[0:3]
+print("Short name:", name_short)
 
+full_name = a[:]     # Same as a[0:]
+print("Full name:", full_name)
 
-nameshort = a[0:3]  # a[:3] these are same
-print(nameshort)
+new = b[:]           # Prints full string
+print("Copied string:", new, "| Type:", type(new))
 
-fullname = a[0:6]  # a[0:] these are same
-print(fullname)
+# Strings are immutable in Python (cannot be changed in place)
+hot = a[:]
+print("Hot:", hot, "| Type:", type(hot))
 
-new = b[:]   # It prints full name 
-
-print(new,type(new))
-
-# sring is immutable it can't be changed
-hot = a[:6]
-print(type(hot),hot)
-
-d = "ume"
+# String concatenation
 best = a + b
-print(best)
+print("Concatenated name:", best)
