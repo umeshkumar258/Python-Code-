@@ -1,25 +1,19 @@
-a = "umesh is good boy but\nhe has fear of \tfuture"
+a = "umesh is a good boy but\nhe has fear of \tfuture"
 print(a)
 
 b = "harry is best teacher of \"programming\" language"
 print(b)
 
-
-letter = "Dear Harry,\n this python course is nice.\t Thanks!"
+letter = "Dear Harry,\nThis python course is nice.\tThanks!"
 print(letter)
 
 import pyjokes
-
-a = pyjokes.get_joke()
-print(a)
-
+joke = pyjokes.get_joke()
+print(joke)
 
 name = "umesh"
-
 new = "babu\t" + name
 print(new)
 
-
-
-
-print(f"")
+# Example of f-string usage
+print(f"My name is {name} and Python is awesome!")
