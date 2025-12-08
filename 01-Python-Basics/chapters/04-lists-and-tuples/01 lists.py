@@ -1,32 +1,38 @@
-name = ["umesh", "orange",6,83,"harry",999]
+# A list can contain different data types (strings, numbers, etc.)
+name = ["umesh", "orange", 6, 83, "harry", 999]
 
-print(name)
+print("Original List:", name)
+print("Type of variable 'name':", type(name))
 
-print(type(name))
+# Indexing example
+print("First element:", name[0])
 
-print(name[0])
-
+# Lists are mutable (values can be changed)
 name[0] = "appu"
+print("Updated first element:", name[0])   # Shows mutability
 
-print(name[0])   # Lits are mutable and it can be changed by adding something else
+# Access last element
+print("Last element:", name[-1])
 
-print(name[-1])
+# List slicing
+print("From index 0 to end:", name[0:])
+print("Full list slice:", name[:])
 
-print(name[0:])   # lists can be indexed like an string
-
-print(name[:])
-
+# Append new value
 name.append("umeshkumar")
+print("List after appending:", name)
 
-print(name[1:3])
+# Slice example (index 1 and 2)
+print("Slice [1:3] ->", name[1:3])
 
-# same in strings we can do slicling
-
+# Another list example
 friends = ["john", "doe", "alice", "bob"]
 
-print(friends[1:3])
+print("Friend slice [1:3] ->", friends[1:3])
 
+# Modify element in list
 name[3] = "umesh"
-print(friends)
+print("Updated name list:", name)
 
-
+# Printing final friends list
+print("Friends list:", friends)
