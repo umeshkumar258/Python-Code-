@@ -1,16 +1,21 @@
-a = (4,484,2,384,2)
+# Tuple declaration
+a = (4, 484, 2, 384, 2)
+
+# Set declaration (but later overwritten so not needed)
 b = {8}
 
-print(type(a),a)
+print("Type of a:", type(a), "| Value:", a)
+print("Length of tuple a:", len(a))
 
-print(len(a))
+# Count occurrences of value in tuple
+print("Count of 2 in tuple a:", a.count(2))
 
-
-print(a.count(2))
-print(a)
-
+# Tuple repetition
 b = a * 3
-print(b)
+print("Tuple repeated 3 times:", b)
 
-print(a.index(2))
-# Tuples are immutable it can not be change
+# Finding first index of value
+print("Index of first occurrence of 2:", a.index(2))
+
+# NOTE:
+# Tuples are immutable - values cannot be changed or modified.
