@@ -1,40 +1,32 @@
-# name = [ "umesh", "appu","harry",3,383,3922,"rohan"]
-
-# print(len(name))
-
-# name.append(36)
-
-# name.insert(3,435)
-
-# name.count("umesh")
-
-
-# print(namprint(numeber) = [74,74,553,76]
+def show(step, lst):
+    print(f"{step}: {lst}")
 
 a = [3, 5, 7, 88, 46]
+show("Original", a)
 
 a.sort()
-print(a)
+show("Sorted", a)
 
 a.reverse()
-print(a)
+show("Reversed", a)
 
 a.append(88)
-print(a)
+show("Append 88", a)
 
-a.insert(3,99)
-print(a)
+a.insert(3, 99)
+show("Insert 99 at index 3", a)
 
 a.pop(2)
-print(a)
+show("Pop index 2", a)
 
 a.remove(88)
-print(a)
+show("Remove 88", a)
 
+if 88 in a:
+    print("Index of 88:", a.index(88))
+else:
+    print("88 not found")
 
-print(a.index(88))  # it will give the index 
+print("Count of 88:", a.count(88))
 
-
-print(a.count(88))  # it will give the count of the number
-print(a)
-
+show("Final list", a)
