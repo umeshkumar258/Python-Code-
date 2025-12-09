@@ -1,26 +1,28 @@
-marks = {"umesh":"73","babu":"87","harry":"88"}
+# Creating a dictionary
+marks = {"umesh": "73", "babu": "87", "harry": "88"}
 
-print(marks.items())  # output is key value pairs
+# Display dictionary items, keys and values
+print("Items:", marks.items())    # (key, value) pairs
+print("Keys:", marks.keys())      # All keys
+print("Values:", marks.values())  # All values
 
-print(marks.keys())
+# Length of dictionary
+print("Number of students:", len(marks))
 
-print(marks.values())
+# Access value using get()
+print("Umesh's marks (before update):", marks.get("umesh"))
 
-print(len(marks))
+# Updating values / adding new key-value pairs
+marks.update({"umesh": 89})   # updates existing key
+marks.update({"vinay": 99})   # adds new key
 
-print(marks.get("umesh"))
+# Removing a key-value pair
+marks.pop("umesh")            # removes umesh
 
-marks.update({"umesh":89})
-marks.update({"vinay":99})
+print("Updated dictionary:", marks)
 
+# Safe access using get()
+print("Unknown key:", marks.get("umesh4"))  # prints None
 
-marks.pop("umesh")
-
-print(marks)
-
-
-print(marks.get("umesh4"))  # prints None
-
-
-# print(marks["umesh4"])   # gives error
-
+# Unsafe access (commented because it causes error)
+# print(marks["umesh4"])
