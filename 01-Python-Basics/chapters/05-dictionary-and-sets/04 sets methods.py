@@ -1,38 +1,27 @@
-# 1. Sets are unordered => Element’s order doesn’t matter 
-# 2. Sets are unindexed => Cannot access elements by index 
-# 3. There is no way to change items in sets. 
-# 4. Sets cannot contain duplicate values.
+# Set properties:
+# 1. Sets are unordered 
+# 2. Sets are unindexed 
+# 3. You cannot change items directly
+# 4. Sets do not allow duplicates
 
+set1 = {37, 393, 283, 29, 66}
+set2 = {35, 72, 283, 9, 66}
 
-set = {37,393,283,29,66}
+set1.add(76)  # Add an element
 
-set2 = {35,72,283,9,66}
+# Display results
+print("Is set1 a subset of set2?", set1.issubset(set2))
+print("Intersection:", set1.intersection(set2))
+print("Is set1 a superset of set2?", set1.issuperset(set2))
+print("Union:", set1.union(set2))
 
-set.add(76)  # add an element to a set
+# Remove element (do NOT print remove())
+set1.remove(37)
 
+print("Length of set1:", len(set1))
+print("Updated set1:", set1)
 
-set.difference(set2)
-
-print(set.issubset(set2))
-
-print(set.intersection(set2))
-
-print(set.issuperset(set2))
-
-print(set.union(set2))
-
-print(set.remove(37))
-
-
-print(len(set))
-
-
-print(set)
-
-
-# empty = set() # create an empty set
-
-s1 = {1,2,3}
-s2 = {1,2,3,4,6}
-
-print(s2.issuperset(s1))
+# Example: superset check
+s1 = {1, 2, 3}
+s2 = {1, 2, 3, 4, 6}
+print("Is s2 a superset of s1?", s2.issuperset(s1))
