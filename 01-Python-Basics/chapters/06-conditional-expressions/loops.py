@@ -1,8 +1,7 @@
-number = int(input("Enter the number: "))  # Get input from the user
+number = int(input("Enter the number: "))
 
-# Loop through numbers from 0 to the input number
-for i in range(number):
-    if i % 2 == 0:
-        print(f"{i} is even")
-    else:
-        print(f"{i} is odd")
+print("Even/Odd result:\n")
+
+for i in range(number + 1):
+    status = "even" if i % 2 == 0 else "odd"
+    print(f"{i:>3} → {status}")
