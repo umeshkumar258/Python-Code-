@@ -1,27 +1,10 @@
-# age = int(input("Enter the age:"))
-# status = "Adult" if age >= 18 or age == 17 else "Minor"   # Ternary operator
-# print(status)
+print("📌 Phone Number Validation Program")
 
+# Step 1: Take input as string
+phone = input("Enter your 10-digit phone number: ")
 
-# # Step 2: Conditional Expressions (Ternary Operator)
-# num = 95
-# new = "good" if num == 93 else "umesh"
-# print(new)
-
-
-# a = int(input("Enter the number:"))
-
-# if a == 84 and a >= 49:
-#     print("your good")
-
-# else :
-#     print("your not good")
-
-
-user = int(input("Enter the number: "))
-
-if len(str(user)) == 10:
-    print("Valid number ")
-
+# Step 2: Validation
+if phone.isdigit() and len(phone) == 10 and phone[0] in "6789":
+    print("✔ Valid Indian phone number")
 else:
-    print("Invalid number")
+    print("❌ Invalid phone number")
