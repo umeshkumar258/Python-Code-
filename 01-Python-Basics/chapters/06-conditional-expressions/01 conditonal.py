@@ -1,16 +1,13 @@
-a = int(input("Enter your age:"))
+age = int(input("Enter your age: "))
 
-if(a>18):
-    print("your the above age of consent")
-    print("good of you")
+if age <= 0:
+    print("You entered an invalid age.")
 
-elif(a<=0):
-    print("your are entering invlaid age")
+elif age < 18:
+    print("You are a minor.")
 
-elif(a==18):
-    print("your are minor")
+elif age == 18:
+    print("You just reached the age of consent.")
 
 else:
-    print("your are not grownup")
-
-
+    print("You are above the age of consent.")
