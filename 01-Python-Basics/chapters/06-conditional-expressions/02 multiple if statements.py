@@ -1,12 +1,16 @@
-a = int(input("enter the age:"))
+age = int(input("Enter your age: "))
 
+if age <= 0:
+    print("❗ Invalid age entered.")
 
-if(a<=99):
-    print("your are not good")
-                                    # both statmetns will print
-if(a==99):
-    print("okk buddy")
+elif age < 18:
+    print("⚠️ You are not old enough.")
+
+elif age < 99:
+    print("🙂 You are doing good.")
+
+elif age == 99:
+    print("🎉 Wow! You are 99 years old! Ok buddy.")
 
 else:
-    print("welcome")
-
+    print("👋 Welcome! You are above 99.")
