@@ -1,31 +1,45 @@
-def goodDay(name,ending):
-    print("good Day " + name)
+# ---------------------------------------
+# 1. Function with parameters (no return)
+# ---------------------------------------
+def good_day(name, ending):
+    print(f"Good Day {name}")
     print(ending)
 
-goodDay("umesh","thanks")
-goodDay("harry","thank you")
+
+good_day("Umesh", "Thanks")
+good_day("Harry", "Thank you")
 
 
-
-def goodDay(name,ending,new):
-    print("good Day " + name + new)
+# ---------------------------------------
+# 2. Function with return value
+# ---------------------------------------
+def good_day_with_status(name, ending, extra):
+    print(f"Good Day {name} {extra}")
     print(ending)
-    return "done"
-    
+    return "Done"
 
-a = goodDay("umesh","thanks","hot")
-print(a)
 
-# Function to add two numbers
-def new(number, number2):
-    return number + number2
+status = good_day_with_status("Umesh", "Thanks", "🔥")
+print("Function returned:", status)
 
-# Loop to take input and display results
+
+# ---------------------------------------
+# 3. Function to add two numbers
+# ---------------------------------------
+def add_numbers(num1, num2):
+    return num1 + num2
+
+
+# ---------------------------------------
+# 4. Loop with input + exception handling
+# ---------------------------------------
 for i in range(3):
     try:
-        number = int(input("Enter first number: "))
-        number2 = int(input("Enter second number: "))
-        result = new(number, number2)
+        num1 = int(input("\nEnter first number: "))
+        num2 = int(input("Enter second number: "))
+
+        result = add_numbers(num1, num2)
         print("The result is:", result)
+
     except ValueError:
-        print("Invalid input. Please enter valid integers.")
+        print("❌ Invalid input. Please enter valid integers.")
