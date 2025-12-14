@@ -1,6 +1,6 @@
-def goodday(name,ending = "Thanks"):
-    print(f"God day,{name}")
+def good_day(name, ending="Thanks"):
+    print(f"Good day, {name}")
     print(ending)
 
-goodday("umesh","Thank you")
 
+good_day("Umesh", "Thank you")
