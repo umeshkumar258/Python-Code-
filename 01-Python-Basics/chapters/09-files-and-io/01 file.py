@@ -1,29 +1,37 @@
-
-""" a = " a is binary file
-
-email[umeshkumarjn143@gmail.com]
+"""
+Text files example
+Binary files example
+Email: umeshkumarjn143@gmail.com
 """
 
-f = open("file.txt","r")  # txt is extenation of file
+# ---------------------------------------
+# OPEN & READ A FILE
+# ---------------------------------------
 
-# f()ile.txt = filename
-# r = mode
+# open() is a built-in function used to open files
+# "file.txt" → file name
+# "r" → read mode (default)
 
-data = f.read()
-print(data)
-f.close()
+try:
+    with open("file.txt", "r") as f:   # with automatically closes the file
+        data = f.read()
+        print("File content:\n")
+        print(data)
 
-# text files = .txt,.c
-# binary files = .jpg,.dat
+except FileNotFoundError:
+    print("❌ File not found. Please check the file name.")
 
-# oprn is built in funtion it opens the file
+# ---------------------------------------
+# WRITE TO A FILE
+# ---------------------------------------
+with open("file.txt", "w") as f:
+    f.write("Hello, this is written using Python file handling.\n")
 
-'''
-r': Read (default mode). Opens a file for reading.
-'w': Write. Opens a file for writing. If the file exists, it truncates the file to zero length.
-'a': Append. Opens a file for writing, but doesn’t truncate the file. Data is written at the end of the file.
-'b': Binary. Used to read/write binary files (like images).
-'x': Exclusive creation. If the file already exists, it throws an error.
-'t': Text (default mode). This is used for text files (it’s the default).
-'r+': Read and Write. Opens a file for both reading and writing
-'''
+# ---------------------------------------
+# APPEND TO A FILE
+# ---------------------------------------
+with open("file.txt", "a") as f:
+    f.write("This line is appended at the end.\n")
+
+print("\nFile operations completed successfully.")
+
