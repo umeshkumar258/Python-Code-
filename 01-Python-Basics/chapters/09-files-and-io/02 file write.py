@@ -1,6 +1,7 @@
-file= "I am Umesh kumar JB  REVA University I am in CSIT of yes i am in good yes you are good i am back to work  "
+content = "I am Umesh Kumar J B. REVA University. I am in CSIT. Yes, I am good. Back to work."
 
-f = open("newfile.txt","w")
+# Write text to a file
+with open("newfile.txt", "w") as f:
+    f.write(content)
 
-f.write(file)
-f.close()
+print("Data written to file successfully.")
