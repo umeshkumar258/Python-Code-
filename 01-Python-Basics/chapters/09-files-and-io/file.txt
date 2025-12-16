@@ -1,4 +1,10 @@
-My self umesh kumar jb i wnna become full stack web devloper
+# ---------------------------------------
+# ALL IN ONE TEXT FILE PROGRAM
+# ---------------------------------------
+
+filename = "about_me.txt"
+
+content = """My self umesh kumar jb i wnna become full stack web devloper
 i am second line
 i am third lineumesh is cute boy
 umesh is cute boy
@@ -8,3 +14,53 @@ umesh is cute boy
 umesh is cute boy
 umesh is cute boy
 umesh is cute boy
+"""
+
+# ---------------------------------------
+# 1️⃣ WRITE CONTENT TO FILE
+# ---------------------------------------
+with open(filename, "w") as f:
+    f.write(content)
+
+print("✔ Content written to file\n")
+
+# ---------------------------------------
+# 2️⃣ READ FULL FILE
+# ---------------------------------------
+with open(filename, "r") as f:
+    data = f.read()
+    print("📄 Full File Content:\n")
+    print(data)
+
+# ---------------------------------------
+# 3️⃣ READ LINE BY LINE
+# ---------------------------------------
+print("📌 Line by line reading:")
+with open(filename, "r") as f:
+    for line in f:
+        print(line.strip())
+
+# ---------------------------------------
+# 4️⃣ COUNT LINES, WORDS, CHARACTERS
+# ---------------------------------------
+lines = content.splitlines()
+words = content.split()
+characters = len(content)
+
+print("\n📊 File Statistics:")
+print("Total lines      :", len(lines))
+print("Total words      :", len(words))
+print("Total characters :", characters)
+
+# ---------------------------------------
+# 5️⃣ COUNT A SPECIFIC SENTENCE
+# ---------------------------------------
+search_text = "umesh is cute boy"
+count = content.lower().count(search_text)
+
+print(f"\n'{search_text}' appears {count} times")
+
+# ---------------------------------------
+# END OF PROGRAM
+# ---------------------------------------
+print("\n✅ End of program")
