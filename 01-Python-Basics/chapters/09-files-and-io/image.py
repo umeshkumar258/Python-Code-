@@ -1,28 +1,46 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import os
+import sys
 
-# Create the Tkinter window
+# ---------------------------------------
+# CREATE TKINTER WINDOW
+# ---------------------------------------
 root = tk.Tk()
 root.title("Image Display")
+root.geometry("600x500")
 
-# Define the image path
+# ---------------------------------------
+# IMAGE PATH
+# ---------------------------------------
 image_path = "appu.jpg"
 
-# Try to open the image file using Pillow
-try:
-    image = Image.open(image_path)
-except FileNotFoundError:
-    print(f"Error: The file '{image_path}' was not found. Please check the file path.")
+# ---------------------------------------
+# CHECK IF FILE EXISTS
+# ---------------------------------------
+if not os.path.exists(image_path):
+    print(f"❌ Error: '{image_path}' not found.")
     root.destroy()
-    exit()
+    sys.exit()
 
-# Convert the image to a format Tkinter can use
+# ---------------------------------------
+# OPEN IMAGE USING PIL
+# ---------------------------------------
+image = Image.open(image_path)
+
+# Optional: resize image
+image = image.resize((400, 300))
+
+# Convert PIL image → Tkinter image
 image_tk = ImageTk.PhotoImage(image)
 
-# Create a Label widget to display the image
+# ---------------------------------------
+# DISPLAY IMAGE IN LABEL
+# ---------------------------------------
 label = tk.Label(root, image=image_tk)
-label.pack()
+label.pack(pady=20)
 
-# Start the Tkinter event loop
+# ---------------------------------------
+# START GUI LOOP
+# ---------------------------------------
 root.mainloop()
