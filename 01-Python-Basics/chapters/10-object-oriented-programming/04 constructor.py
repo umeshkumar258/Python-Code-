@@ -1,23 +1,42 @@
+# ---------------------------------------
+# CLASS DEFINITION
+# ---------------------------------------
 class Employee:
-    language =  "python"
+    # Class attributes
+    language = "Python"
     salary = 1200000
 
-    def __init__(self,name,salary,language):   # dunder mehtod which is called imedatly
-        self.salary= salary
-        self.language=language
+    # Constructor (dunder method)
+    def __init__(self, name, salary, language):
+        self.name = name          # instance attribute
+        self.salary = salary      # instance attribute
+        self.language = language  # instance attribute
         print("I am creating an object")
 
-    
+    # Instance method
     def getInfo(self):
-        print(f"the language is {self.language},the slary {self.salary}")
-    
+        print(f"Name     : {self.name}")
+        print(f"Language : {self.language}")
+        print(f"Salary   : {self.salary}")
+
+    # Static method (no self)
     @staticmethod
-    def greet(self):
-        print("good morning")
-
-umesh = Employee("harry",130000,"javascript")
-# umesh.language = "java"
+    def greet():
+        print("Good morning")
 
 
-# umesh.getInfo()
+# ---------------------------------------
+# OBJECT CREATION
+# ---------------------------------------
+umesh = Employee("Umesh", 130000, "JavaScript")
+
+# ---------------------------------------
+# METHOD CALLS
+# ---------------------------------------
+print("\nUsing object:")
+umesh.getInfo()
+umesh.greet()
+
+print("\nUsing class:")
 Employee.getInfo(umesh)
+Employee.greet()
