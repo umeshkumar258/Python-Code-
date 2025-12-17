@@ -1,19 +1,37 @@
+# ---------------------------------------
+# CLASS DEFINITION
+# ---------------------------------------
 class Employee:
-    language =  "python"
+    # Class attributes
+    language = "Python"
     salary = 1200000
 
-
+    # Instance method
     def getInfo(self):
-        print(f"the language is {self.language},the slary {self.salary}")
-    
+        print(f"Language : {self.language}")
+        print(f"Salary   : {self.salary}")
+
+    # Static method (no self)
     @staticmethod
-    def greet(self):
-        print("good morning")
+    def greet():
+        print("Good morning")
 
+
+# ---------------------------------------
+# OBJECT CREATION
+# ---------------------------------------
 umesh = Employee()
-umesh.language = "java"
 
+# Instance attribute (overrides class attribute for this object)
+umesh.language = "Java"
 
-# umesh.getInfo()
+# ---------------------------------------
+# METHOD CALLS
+# ---------------------------------------
+print("Using object:")
+umesh.getInfo()
+umesh.greet()
+
+print("\nUsing class:")
 Employee.getInfo(umesh)
-Employee.greet(umesh)
+Employee.greet()
