@@ -1,24 +1,46 @@
+# ---------------------------------------
+# BASE CLASS 1
+# ---------------------------------------
 class Employee:
-    company = "IYc"
-    name = "umesh"
+    company = "IYC"
+    name = "Umesh"
     salary = 8999999
+
     def show(self):
-        print(f"The name of the Emplyee is {self.name} and the salary is {self.salary}")
-
-class coder:
-    language = "python"
-    def printlanguges (self):
-        print(f"out of all the language here is your language :{self.language}")
+        print(f"Employee Name : {self.name}")
+        print(f"Salary        : {self.salary}")
 
 
-class programmer(Employee,coder):
+# ---------------------------------------
+# BASE CLASS 2
+# ---------------------------------------
+class Coder:
+    language = "Python"
+
+    def print_languages(self):
+        print(f"Known Language: {self.language}")
+
+
+# ---------------------------------------
+# DERIVED CLASS (MULTIPLE INHERITANCE)
+# ---------------------------------------
+class Programmer(Employee, Coder):
     company = "ITC Infotech"
-    def showlanguage(self):
-        print(f"The company is {self.company}")
 
+    def show_company(self):
+        print(f"Company       : {self.company}")
+
+
+# ---------------------------------------
+# OBJECT CREATION
+# ---------------------------------------
 a = Employee()
-b = programmer()
+b = Programmer()
 
-b.show()
-b.printlanguges()
-b.showlanguage()
+# ---------------------------------------
+# METHOD CALLS
+# ---------------------------------------
+print("Using Programmer object:\n")
+b.show()              # From Employee
+b.print_languages()   # From Coder
+b.show_company()      # From Programmer
