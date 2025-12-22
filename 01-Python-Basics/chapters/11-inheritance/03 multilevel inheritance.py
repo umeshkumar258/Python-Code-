@@ -1,20 +1,49 @@
+# ---------------------------------------
+# BASE CLASS
+# ---------------------------------------
 class Employee:
     a = 1
 
 
+# ---------------------------------------
+# CHILD CLASS (inherits Employee)
+# ---------------------------------------
 class Programmer(Employee):
     b = 2
 
+
+# ---------------------------------------
+# GRANDCHILD CLASS (inherits Programmer)
+# ---------------------------------------
 class Manager(Programmer):
     c = 3
 
 
-o = Employee()
-print(o.a) # prints the a attribute
-# print(o.b) # Shows an error as there is no b attribute in Emplyee class
+# ---------------------------------------
+# OBJECT OF Employee
+# ---------------------------------------
+o1 = Employee()
+print("Employee object:")
+print("a =", o1.a)
+# print(o1.b)  # ❌ Error: Employee has no attribute 'b'
+print()
 
-o = Programmer()
-print(o.a,o.b)
 
-o = Manager()
-print(o.a,o.b)
+# ---------------------------------------
+# OBJECT OF Programmer
+# ---------------------------------------
+o2 = Programmer()
+print("Programmer object:")
+print("a =", o2.a)   # inherited from Employee
+print("b =", o2.b)   # from Programmer
+print()
+
+
+# ---------------------------------------
+# OBJECT OF Manager
+# ---------------------------------------
+o3 = Manager()
+print("Manager object:")
+print("a =", o3.a)   # inherited from Employee
+print("b =", o3.b)   # inherited from Programmer
+print("c =", o3.c)   # from Manager
