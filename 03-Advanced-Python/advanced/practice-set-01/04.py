@@ -1,12 +1,22 @@
+# ---------------------------------------
+# DIVISION WITH TRY-EXCEPT
+# ---------------------------------------
+
 try:
-    a = int(input("Enter the number:"))
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
 
-    b = int(input("Enter the number:"))
+    result = a / b
+    print(f"The division is: {result}")
 
-    print(f"the divison is {a/b}")
+except ZeroDivisionError:
+    print("❌ Cannot divide by zero (infinite).")
 
-except ZeroDivisionError as e:
-    print("infinte")
-    
+except ValueError:
+    print("❌ Please enter valid integers only.")
 
-print("Thanks")
+else:
+    print("✅ Division successful.")
+
+finally:
+    print("Thanks")
