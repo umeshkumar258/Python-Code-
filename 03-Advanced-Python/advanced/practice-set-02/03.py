@@ -1,5 +1,12 @@
-table = [str(7*i) for i in range(1,11)]
+# ---------------------------------------
+# MULTIPLICATION TABLE USING JOIN
+# ---------------------------------------
 
-s = "\n.".join(table)
+n = 7
 
-print(s)
+table = [str(n * i) for i in range(1, 11)]
+
+result = "\n".join(table)
+
+print(f"Table of {n}:\n")
+print(result)
