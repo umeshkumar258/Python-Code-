@@ -1,10 +1,14 @@
-name = input("enter the name: ")
+# ---------------------------------------
+# STUDENT DETAILS PROGRAM
+# ---------------------------------------
 
-marks = int(input("enter the marks:"))
+name = input("Enter the name: ")
+marks = int(input("Enter the marks: "))
+phone = input("Enter the phone number: ")
 
-phone = int(input("enter the marks:"))
-
-s = "The name of the student is {},his marks are{}and phone numeber is{}".format(name,marks,phone)
-
+# Using format()
+s = "The name of the student is {}, his marks are {}, and phone number is {}.".format(
+    name, marks, phone
+)
 
 print(s)
