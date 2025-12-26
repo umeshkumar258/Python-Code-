@@ -3,7 +3,8 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+def home():
+    return "<h1>Hello, World!</h1><p>Welcome to my Flask app</p>"
 
-app.run()
+if __name__ == "__main__":
+    app.run(debug=True)
