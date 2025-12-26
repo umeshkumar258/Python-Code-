@@ -1,12 +1,11 @@
 from functools import reduce
 
-a = [2,3,66,4,34,55,99,65]
+numbers = [2, 3, 66, 4, 34, 55, 99, 65]
 
-def greater(a,b):
-    if(a>b):
-        return a
-    return b
+def greater(x, y):
+    """Return the greater of two numbers"""
+    return x if x > y else y
 
-print(reduce(greater,a))
+maximum = reduce(greater, numbers)
 
-# I Love this one
+print("Maximum value:", maximum)
