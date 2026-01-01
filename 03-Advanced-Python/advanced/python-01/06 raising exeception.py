@@ -1,12 +1,17 @@
-a = int(input("enter the numeber:"))
+try:
+    a = int(input("Enter the number: "))
+    b = int(input("Enter the number: "))
 
-b = int(input("eneter the numeber:"))
+    if b == 0:
+        raise ZeroDivisionError("Division by zero is not allowed")
 
-if(b == 0):
-    raise ZeroDivisionError("heyyyy not good")
+    print(f"The division a/b is: {a / b}")
 
-else:
-   print(f"The division a/b is: {a/b}")
+except ValueError:
+    print("Please enter only numbers.")
 
+except ZeroDivisionError as e:
+    print("Error:", e)
 
-# by using raise it will crash the progamming
+finally:
+    print("Program finished safely.")
