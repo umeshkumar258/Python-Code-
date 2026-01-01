@@ -1,14 +1,30 @@
-try:
-    a = int(input("Hey,enter a number:"))
-    print(a)
+# -----------------------------------
+# EXCEPTION HANDLING - ALL IN ONE
+# -----------------------------------
 
-except ValueError as v:
-    print("heyyyy")
-    print(v)
-except Exception as e:
-    print(e)
+def get_number():
+    try:
+        # Risky code
+        a = int(input("Hey, enter a number: "))
+        print("You entered:", a)
 
-print("Thanks")
+    except ValueError as v:
+        # Handles wrong input type
+        print("Invalid input! Enter only numbers.")
+        print("Error:", v)
+
+    except Exception as e:
+        # Handles all other errors
+        print("Unexpected error:", e)
+
+    else:
+        # Executes if no exception occurs
+        print("Conversion successful.")
+
+    finally:
+        # Always executes
+        print("Thanks for using the program.\n")
 
 
-# by using this it will not crash the progamme 
+# Function call
+get_number()
