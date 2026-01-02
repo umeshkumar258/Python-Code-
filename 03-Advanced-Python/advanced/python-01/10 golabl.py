@@ -1,10 +1,9 @@
-a = 77
+a = 77   # Global variable
 
 def fun():
-    global a
-    a = 3
+    global a   # Refers to the global variable 'a'
+    a = 3      # Modifies the global variable
+    print(a)   # Prints updated value of 'a'
 
-    print(a)
-
-fun()
-print(a)
+fun()          # Function call
+print(a)       # Prints global 'a'
