@@ -1,12 +1,12 @@
-list = [384,48,593,3]
+# List of numbers
+nums = [384, 48, 593, 3]
 
+print("Using normal for loop:")
 index = -1
-for item in list:
-    index +=1
-    print(f"The item number {index} is {item}")
+for item in nums:
+    index += 1
+    print(f"The item number at index {index} is {item}")
 
-
-# this can be simplifed using enumerate funtion
-
-for index , item in enumerate(list):
-    print(f"The item numeber at index {index} is {item}")
+print("\nUsing enumerate function:")
+for index, item in enumerate(nums):
+    print(f"The item number at index {index} is {item}")
