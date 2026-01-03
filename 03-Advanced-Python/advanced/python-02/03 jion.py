@@ -1,4 +1,9 @@
-a = ["umesh","babu","janvin"]
+# List of strings
+names = ["umesh", "babu", "janvin"]
 
-final = "::".join(a)
-print(final)
+# Join list elements using "::" as separator
+joined_names = "::".join(names)
+
+# Output
+print("Original list :", names)
+print("Joined string :", joined_names)
