@@ -1,21 +1,36 @@
 import random
 
+print("🎮 Welcome to Gun–Water–Snake Game")
 
-computer = random.randint(1,3)
+# Computer choice
+computer = random.randint(1, 3)
 
-dic = { 1: "gun ", 2 : "water", 3:"snake"}
+# Dictionary for choices
+choices = {
+    1: "Gun",
+    2: "Water",
+    3: "Snake"
+}
 
-user = int(input("Enter (1 for gun, 2 for water, 3 for snake): "))
+try:
+    # User input
+    user = int(input("Enter your choice (1 = Gun, 2 = Water, 3 = Snake): "))
 
-if user not in [1, 2, 3]:
-    print("Invalid input! Please enter 1, 2, or 3.")
-else:
-    print(f"Computer chose: {dic[computer]}")
-    print(f"You chose: {dic[user]}")
-
-    if computer == user:
-        print("It's a tie!")
-    elif (computer == 1 and user == 3) or (computer == 2 and user == 1) or (computer == 3 and user == 2):
-        print("Computer wins!")
+    if user not in choices:
+        print("❌ Invalid input! Please enter 1, 2, or 3.")
     else:
-        print("You win!")
+        print(f"\nComputer chose: {choices[computer]}")
+        print(f"You chose: {choices[user]}")
+
+        # Game logic
+        if computer == user:
+            print("🤝 It's a Tie!")
+        elif (computer == 1 and user == 3) or \
+             (computer == 2 and user == 1) or \
+             (computer == 3 and user == 2):
+            print("💻 Computer Wins!")
+        else:
+            print("🎉 You Win!")
+
+except ValueError:
+    print("❌ Please enter a valid number")
