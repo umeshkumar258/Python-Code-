@@ -1,19 +1,28 @@
 import random
 
+print("🎮 Welcome to the Number Guessing Game")
+print("Guess a number between 1 and 20")
 
-user = int(input("Guess the Number :"))
+# Generate random number
+computer = random.randint(1, 20)
 
-computer = random.randint(1,20)
-print(f"computer number: {computer}")
+guesses = 0
 
-print(f"user number:{user}")
+while True:
+    try:
+        user = int(input("Enter your guess: "))
+        guesses += 1
 
-if (user>computer):
-    print("You guess the higher numeber")
+        if user > computer:
+            print("⬇️ You guessed a higher number")
+        elif user < computer:
+            print("⬆️ You guessed a lower number")
+        else:
+            print("✅ You guessed the correct number!")
+            print(f"🎯 Total attempts: {guesses}")
+            break
 
-elif (computer>user):
-    print("you guess the lower number")
+    except ValueError:
+        print("❌ Please enter a valid integer")
 
-
-else:
-    print("you guess the correct number")
+print("👋 Game Over. Thanks for playing!")
