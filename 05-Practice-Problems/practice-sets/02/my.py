@@ -1,20 +1,20 @@
-# a = int(input("Enter the number :"))
-# b = int(input("Enter the number :"))
+def number_operations():
+    print("📘 Number Operations Program")
+    print("-" * 30)
 
-# print(a+b)
+    try:
+        a = int(input("Enter a number: "))
 
+        print("\n📊 Results")
+        print(f"Square using ** operator : {a ** 2}")
+        print(f"Square using * operator  : {a * a}")
 
+        # Extra operations
+        print(f"Cube of the number       : {a ** 3}")
+        print(f"Is the number even?      : {'Yes' if a % 2 == 0 else 'No'}")
 
+    except ValueError:
+        print("\n❌ Error: Please enter a valid integer.")
 
-# a = int(input("Enter the number"))
-# z = 3
-
-# print(a%z)
-
-
-
-a = int(input("Enter the number"))
-
-print(a**2)
-print(a*a)
-
+# Function call
+number_operations()
