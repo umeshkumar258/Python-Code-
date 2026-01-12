@@ -1,20 +1,23 @@
-marks = []
+# -------- MARKS SORTING PROGRAM --------
 
-a = int(input("enter the marks :"))
-marks.append(a)
+def marks_sorting():
+    marks = []
 
-b = int(input("enter the marks :"))
-marks.append(b)
+    print("📘 Marks Sorting Program")
+    print("-" * 30)
 
-c = int(input("enter the marks :"))
-marks.append(c)
+    for i in range(5):
+        mark = int(input(f"Enter marks {i+1}: "))
+        marks.append(mark)
 
-d = int(input("enter the marks :"))
-marks.append(d)
+    print("\nOriginal Marks List:")
+    print(marks)
 
-e = int(input("enter the marks :"))
-marks.append(e)
+    # Sorting the list
+    marks.sort()
 
-print(marks.sort())
+    print("\nSorted Marks List:")
+    print(marks)
 
-print(marks)
+# Function call
+marks_sorting()
