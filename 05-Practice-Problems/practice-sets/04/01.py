@@ -1,19 +1,17 @@
-fruits = []
+# -------- FRUIT LIST PROGRAM --------
 
+def fruit_list():
+    fruits = []
 
-a = (input("enter the fruit name:"))
-fruits.append(a)
+    print("🍎 Fruit List Program")
+    print("-" * 25)
 
-b = (input("enter the fruit name:"))
-fruits.append(b)
+    for i in range(5):
+        fruit = input(f"Enter fruit {i+1}: ")
+        fruits.append(fruit)
 
-c = (input("enter the fruit name:"))
-fruits.append(c)
+    print("\n📋 Fruits List:")
+    print(fruits)
 
-d = (input("enter the fruit name:"))
-fruits.append(d)
-
-e = (input("enter the fruit name:"))
-fruits.append(e)
-
-print(fruits)
+# Function call
+fruit_list()
