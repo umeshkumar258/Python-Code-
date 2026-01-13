@@ -1,14 +1,17 @@
-s = set()
+# -------- SET INPUT PROGRAM --------
 
-n = input("Enter number :")
-s.add(int(n))
-n = input("Enter number :")
-s.add(int(n))
-n = input("Enter number :")
-s.add(int(n))
-n = input("Enter number :")
-s.add(int(n))
-n = input("Enter number :")
-s.add(int(n))
+def set_demo():
+    s = set()
 
-print(s)
+    print("📘 Set Program (Unique Numbers)")
+    print("-" * 35)
+
+    for i in range(5):
+        n = int(input(f"Enter number {i+1}: "))
+        s.add(n)
+
+    print("\n📋 Set Elements:")
+    print(s)
+
+# Function call
+set_demo()
