@@ -1,44 +1,30 @@
-# a = []
+# -------- LIST & TUPLE PRACTICE PROGRAM --------
 
-# b = input("enter the furits name:")
+def list_and_tuple_demo():
+    print("📘 LIST & TUPLE PRACTICE")
+    print("=" * 35)
 
-# a.append(b)
-# c = input("enter the furits name:")
+    # -------- LIST: MARKS --------
+    marks = []
 
-# a.append(c)
-# d = input("enter the furits name:")
+    for i in range(4):
+        m = int(input(f"Enter marks {i+1}: "))
+        marks.append(m)
 
-# a.append(d)
-# e = input("enter the furits name:")
+    marks.sort()
 
-# a.append(e)
+    print("\n📋 Sorted Marks:", marks)
+    print("➕ Sum of Marks:", sum(marks))
 
-# print(a)
+    # -------- TUPLE --------
+    a = (7, 0, 8, 0, 0, 9)
 
+    zero_count = a.count(0)
+    total_sum = sum(a)
 
+    print("\n📘 Tuple:", a)
+    print("➕ Sum of tuple elements:", total_sum)
+    print("🔢 Number of zeros:", zero_count)
 
-# marks = []
-
-# a = int(input("Enter the marks:"))
-# marks.append(a)
-# a = int(input("Enter the marks:"))
-# marks.append(a)
-# a = int(input("Enter the marks:"))
-# marks.append(a)
-# a = int(input("Enter the marks:"))
-# marks.append(a)
-
-
-
-# marks.sort()
-# print(marks)
-
-# b = sum(marks)
-# print(b)
-
-a = (7, 0, 8, 0, 0, 9)
-
-b = a.count(0)
-c = sum(a)
-print(c)
-print(b)
+# Function call
+list_and_tuple_demo()
