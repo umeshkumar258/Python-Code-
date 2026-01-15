@@ -1,3 +1,2 @@
-s = {}
-
-print(s,type(s))
+s = set()
+print(s, type(s))
