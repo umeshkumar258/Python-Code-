@@ -1,14 +1,11 @@
+# Create an empty dictionary
 d = {}
 
-a = input("enter the name:")
+# Take input two times using a loop
+for i in range(2):
+    name = input("Enter the name: ")
+    language = input("Enter the language: ")
+    d[name] = language   # Direct assignment is better than update()
 
-b = input("enteer the language:")
-
-d.update({a:b})
-a = input("enter the name:")
-
-b = input("enteer the language:")
-
-d.update({a:b})
-
+# Print the dictionary
 print(d)
