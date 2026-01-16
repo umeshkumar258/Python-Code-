@@ -1,14 +1,20 @@
+# Dictionary to store name-language pairs
 d = {}
 
-a = input("enter the name:")
+# Number of entries the user wants to add
+n = int(input("How many entries do you want to add? "))
 
-b = input("enteer the language:")
+for i in range(n):
+    name = input(f"\nEnter name {i+1}: ").strip()
+    language = input(f"Enter {name}'s favorite language: ").strip()
 
-d.update({a:b})
-a = input("enter the name:")
+    # Check if name already exists
+    if name in d:
+        print("⚠️ Name already exists. Updating the language.")
 
-b = input("enteer the language:")
+    d[name] = language
 
-d.update({a:b})
-
-print(d)
+# Display final dictionary
+print("\n📘 Final Dictionary:")
+for name, language in d.items():
+    print(f"{name} → {language}")
