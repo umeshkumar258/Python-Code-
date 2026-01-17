@@ -1,9 +1,9 @@
-list = []
+numbers = []
 
 for _ in range(4):
-    list.append(int(input("Enter the number: ")))
+    numbers.append(int(input("Enter the number: ")))
 
-list.sort()
-print(list)
-print(list[3])
+numbers.sort()
 
+print("Sorted list:", numbers)
+print("Largest number:", numbers[-1])
