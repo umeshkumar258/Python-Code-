@@ -1,23 +1,48 @@
-set = {}
+# --------------------------------
+# ALL IN ONE SET PROGRAM
+# --------------------------------
 
-a = int(input("Enter the number:"))
+# Creating an empty set
+s = set()
 
-set.add(a)
-a = int(input("Enter the number:"))
+# Taking input from the user
+for i in range(5):
+    num = int(input("Enter the number: "))
+    s.add(num)
 
-set.add(a)
-a = int(input("Enter the number:"))
+# Display set
+print("\nSet elements:")
+print(s)
 
-set.add(a)
-a = int(input("Enter the number:"))
+# --------------------------------
+# Adding element
+# --------------------------------
+s.add(100)
+print("\nAfter adding 100:")
+print(s)
 
-set.add(a)
-a = int(input("Enter the number:"))
+# --------------------------------
+# Removing element
+# --------------------------------
+s.remove(100)
+print("\nAfter removing 100:")
+print(s)
 
-set.add(a)
+# --------------------------------
+# Checking membership
+# --------------------------------
+print("\nIs 10 present in set?", 10 in s)
 
-print(set)
+# --------------------------------
+# Length of set
+# --------------------------------
+print("Total elements:", len(s))
 
-
-
-
+# --------------------------------
+# Important notes
+# --------------------------------
+print("\nImportant Points:")
+print("1. Sets do not allow duplicate values")
+print("2. Sets are unordered")
+print("3. Sets store only immutable elements")
+print("4. Empty set is created using set()")
