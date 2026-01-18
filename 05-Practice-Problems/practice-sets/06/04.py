@@ -1,3 +1,3 @@
-a = input("enter the name:")
+name = input("Enter the name: ")
 
-print("name is grater than 10" if  len(a)>10 else "it is not")
+print("Name is greater than 10 characters" if len(name) > 10 else "Name is not greater than 10 characters")
