@@ -1,15 +1,15 @@
-a = int(input("Enter the marks:"))
+marks = int(input("Enter the marks: "))
 
-if(100<a>90):
-    print("exelente")
+if 90 < marks <= 100:
+    print("Excellent")
 
-elif(90<a>80):
+elif 80 < marks <= 90:
     print("A")
 
-elif(80<a>70):
+elif 70 < marks <= 80:
     print("B")
 
-elif(70<a>60):
+elif 60 < marks <= 70:
     print("C")
 
 else:
