@@ -1,5 +1,8 @@
 words = {"umesh", "appu", "harry", "babu"}
 
-a = input("Enter the name: ")
+name = input("Enter the name: ").lower()
 
-print("Good person" if a in words else "Bad person")
+# Convert set items to lowercase for proper comparison
+words = {w.lower() for w in words}
+
+print("Good person" if name in words else "Bad person")
