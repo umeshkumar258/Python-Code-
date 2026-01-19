@@ -1,7 +1,5 @@
-l = ["Harry", "Soham", "Sachin", "Rahul"]
+names = ["Harry", "Soham", "Sachin", "Rahul"]
 
-for i in l:
-    if(i.startswith("S")):
-        print("good morning ",i)
-
-    
+for name in names:
+    if name.startswith("S"):
+        print("Good morning", name)
