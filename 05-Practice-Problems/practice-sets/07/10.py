@@ -1,20 +1,10 @@
-# n = int(input("enter the number:"))
+# --------------------------------
+# REVERSE MULTIPLICATION TABLE
+# --------------------------------
 
-# i =1
+n = int(input("Enter the number: "))
 
-# while(i<11):
-#     print(f"{n} X {i} = {n*i}")
-#     i+=1
-
-# n = int(input("enter the number:"))
-
-# for i in range(1,11):
-#     print(f"{n} X {11-i} = {n*(11-i)}")
-
-
-n = int(input("enter the number:"))
-
-i =1
-while(i<11):
-    print(f"{n}X{11-i} = {n*(11-i)}")
-    i+=1
+i = 1
+while i <= 10:
+    print(f"{n} × {11 - i} = {n * (11 - i)}")
+    i += 1
