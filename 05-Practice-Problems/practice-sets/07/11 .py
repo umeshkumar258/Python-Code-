@@ -1,44 +1,42 @@
-# i tried this one
+# ---------------------------------------
+# ALL IN ONE STAR PATTERNS
+# ---------------------------------------
+
+n = int(input("Enter the number: "))
+
+print("\n1) Right Triangle")
+for i in range(1, n + 1):
+    print("*" * i)
 
 
-# n = int(input("ENter the numebr:"))
-
-# for i in range(1,n+1):
-#     print(""*(n-1),end="")          # this contain to make the space 
-#     print("*"*(n-i+1),end="")
-#     print("")
+print("\n2) Inverted Right Triangle")
+for i in range(1, n + 1):
+    print("*" * (n - i + 1))
 
 
-# n = int(input("ENter the numebr:"))
-
-# for i in range(1,n+1):
-#     print(""*(n+1),end="")    
-#     print("*"*(i),end="")
-#     print("")
+print("\n3) Left Aligned Triangle")
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * i)
 
 
-
-# n = int(input("ENter the numebr:"))
-
-# for i in range(1,n+1):
-#     print(" "*(n-i),end="")
-#     print("*"*(2*i-2),end="")
-#     print("")                      # this line is mantory 
+print("\n4) Center Pyramid")
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
 
 
-n = int(input("ENter the numebr:"))
+print("\n5) Inverted Pyramid")
+for i in range(n, 0, -1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
 
-for i in range(1,n+1):
-    if(i==1 or i==n):
-        print("*"*n ,end="")
+
+print("\n6) Hollow Square")
+for i in range(1, n + 1):
+    if i == 1 or i == n:
+        print("*" * n)
     else:
-        print("*",end="")
-        print(" "*(n-2),end = "")
-        print("*",end = "")
-    print("")
- 
+        print("*" + " " * (n - 2) + "*")
 
 
-
-
-
+print("\n7) Square Pattern")
+for i in range(n):
+    print("*" * n)
