@@ -1,8 +1,8 @@
 n = int(input("Enter the number: "))
 
-def sum(n):
-    if(n==1):
+def find_sum(n):
+    if n == 1:
         return 1
-    return sum(n-1) + n
+    return find_sum(n - 1) + n
 
-print(sum(n))
+print("Sum =", find_sum(n))
