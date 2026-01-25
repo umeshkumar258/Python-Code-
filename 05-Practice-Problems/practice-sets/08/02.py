@@ -1,7 +1,10 @@
-n = int(input("enter the numeber:"))
+def fahrenheit(celsius):
+    return (celsius * 9/5) + 32
 
-def fahrenheit():
-    print((n*(9/5))+32)
 
-fahrenheit()
+n = float(input("Enter the temperature in Celsius: "))
+
+result = fahrenheit(n)
+print("Temperature in Fahrenheit:", result)
+
 print("Thanks")
