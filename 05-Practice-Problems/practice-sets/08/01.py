@@ -1,19 +1,14 @@
-n = [int(input("Enter the numbers: ")) for i in range(3)]
+def greatest(numbers):
+    return max(numbers)
 
-a = max(n)
-
-print(f"The largest number is {a}")
-
-
-# Function to find the greatest of three numbers
-def greatest(a, b, c):
-    return max(a, b, c)
 
 # Taking input from the user
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-num3 = float(input("Enter third number: "))
+nums = []
+for i in range(3):
+    num = float(input(f"Enter number {i + 1}: "))
+    nums.append(num)
 
-# Finding and displaying the greatest number
-result = greatest(num1, num2, num3)
+# Finding the greatest number
+result = greatest(nums)
+
 print(f"The greatest number is: {result}")
