@@ -1,8 +1,11 @@
-with open("log.txt","r") as f:
-    content = f.read()
+file_name = "log.txt"
 
-if ("python" in content):
-    print("yes python is present")
+# Read the file content
+with open(file_name, "r", encoding="utf-8") as file:
+    content = file.read()
 
+# Check if the word 'python' is present
+if "python" in content:
+    print("Yes, 'python' is present in the file.")
 else:
-    print("no python is not present")
+    print("No, 'python' is not present in the file.")
