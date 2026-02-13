@@ -1,19 +1,19 @@
-class calculator:
-    def __init__(self,n):
+class Calculator:
+    def __init__(self, n: float):
         self.n = n
 
-
     def square(self):
-        print(f"the square is {self.n*self.n}")
+        return self.n ** 2
 
     def cube(self):
-        print(f"the cube is {self.n*self.n*self.n}")
-    
-    def roote(self):
-        print(f"the square roote {self.n**1/2}")
+        return self.n ** 3
 
-a = calculator(4)
-a.square()
-a.cube()
-a.roote()
+    def square_root(self):
+        return self.n ** 0.5
 
+
+a = Calculator(4)
+
+print("Square:", a.square())
+print("Cube:", a.cube())
+print("Square Root:", a.square_root())
