@@ -1,23 +1,23 @@
-class calculator:
-    def __init__(self,n):
+class Calculator:
+    def __init__(self, n):
         self.n = n
 
-
     def square(self):
-        print(f"the square is {self.n*self.n}")
+        print(f"The square is {self.n ** 2}")
 
     def cube(self):
-        print(f"the cube is {self.n*self.n*self.n}")
+        print(f"The cube is {self.n ** 3}")
     
-    def roote(self):
-        print(f"the square roote {self.n**1/2}")
+    def square_root(self):
+        print(f"The square root is {self.n ** 0.5}")
 
-    @staticmethod         # without class atrributes this exist
+    @staticmethod
     def hello():
         print("Hello Umesh")
 
-a = calculator(4)
+
+a = Calculator(4)
 a.square()
 a.cube()
-a.roote()
+a.square_root()
 a.hello()
