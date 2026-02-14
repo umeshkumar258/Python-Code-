@@ -8,12 +8,12 @@ I am pursuing engineering at REVA University.
 """
 
 # Taking user input
-a = int(input("Enter a number: "))
-print("You entered:", a, "| Type:", type(a))
+number = int(input("Enter a number: "))
+print(f"You entered: {number} | Type: {type(number)}")
 
 print("Umesh is continuously learning!")
 
 '''
-This is a multi–line comment
+This is a multi-line comment
 explaining something in the program.
 '''
