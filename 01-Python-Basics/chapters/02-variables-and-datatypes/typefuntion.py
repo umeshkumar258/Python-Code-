@@ -1,8 +1,14 @@
-a = 84.48
+# Type Conversion Example
 
-b = "838"  # string value
+a = 84.48          # float value
+b = "838"          # string value
 
-st = int(b)  # converting string to integer
+try:
+    converted_value = int(b)      # convert string to integer
+    result = a + converted_value  # add float and int
 
-new = a + st
-print(new)
+    print(f"Converted value: {converted_value} (Type: {type(converted_value)})")
+    print(f"Final result: {result} (Type: {type(result)})")
+
+except ValueError:
+    print("Error: Cannot convert string to integer.")
