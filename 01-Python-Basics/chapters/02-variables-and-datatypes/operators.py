@@ -1,40 +1,38 @@
-# OPERATORS IN PYTHON
+"""
+OPERATORS IN PYTHON
+"""
 
-# 1. Arithmetic Operators: +, -, *, /, %, **, //
+# -------------------------------
+# 1️⃣ Arithmetic & Assignment Operators
+# -------------------------------
 
-e = 3
-e += 8      # e = 3 + 8 = 11
-e *= 6      # e = 11 * 6 = 66
-e /= 29     # e = 66 / 29 (result is float)
+num = 3
+num += 8      # num = num + 8
+num *= 6      # num = num * 6
+num /= 29     # division always returns float
 
-print("Value of e =", e)
+print(f"Final value of num: {num}")
+print(f"Type of num: {type(num)}\n")
 
 
-# 2. Comparison Operators: ==, >, >=, <, != etc.
+# -------------------------------
+# 2️⃣ Comparison Operators
+# -------------------------------
 
-a = (1 == 1)
-print("Is 1 equal to 1? ->", a)
+is_equal = (1 == 1)
+print(f"Is 1 equal to 1? -> {is_equal}")
 
 b = 38
 c = 33
-print("Is b >= c? ->", b >= c)
+print(f"Is {b} greater than or equal to {c}? -> {b >= c}")
 
-# Comparison operators always return boolean values
+print("Comparison operators always return Boolean values.\n")
 
 
-# 3. Logical Operators: and, or, not
+# -------------------------------
+# 3️⃣ Logical Operators
+# -------------------------------
 
-g = True or False
-print("True or False =", g)
-
-print("True or False =", True or False)
-print("True or True =", True or True)
-
-r = True and False
-print("True and False =", r)
-
-y = not False
-print("not False =", y)
-
-z = True and False
-print("True and False again =", z)
+print(f"True OR False  -> {True or False}")
+print(f"True AND False -> {True and False}")
+print(f"NOT False      -> {not False}")
