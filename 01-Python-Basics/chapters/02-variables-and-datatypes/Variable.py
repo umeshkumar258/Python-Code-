@@ -1,18 +1,18 @@
-# 'a' and 'b' are identifiers (variable names)
-# 5 and 3 are literal values stored inside variables
+# Integer variables
+num1 = 5
+num2 = 3
 
-a = 5
-b = 3
+# Perform operations
+sum_result = num1 + num2
+product_result = num1 * num2
 
-print(a + b)
-print(a * b)
+# Print results using formatted strings
+print(f"Sum of {num1} and {num2} is: {sum_result}")
+print(f"Product of {num1} and {num2} is: {product_result}")
 
-# Variables act like containers that hold data
-# Here 'name' is the identifier and "umesh" is the value stored inside it
+# String variable
+name = "Umesh"
 
-name = "umesh"
-
-print(name, type(name))
-print(a, type(a))
-
-
+# Display variable values and their types
+print(f"Name: {name} | Type: {type(name)}")
+print(f"Number: {num1} | Type: {type(num1)}")
