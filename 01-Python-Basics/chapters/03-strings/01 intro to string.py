@@ -1,22 +1,21 @@
-# All of these represent strings
-a = "umesh"
-b = 'umesh'
-c = '''umesh'''
+# String creation
+first_name = "Umesh"
+duplicate_name = first_name  # No need for slicing copy
 
 # String slicing
-name_short = a[:3]   # Same as a[0:3]
-print("Short name:", name_short)
+short_name = first_name[:3]
+print(f"Short name: {short_name}")
 
-full_name = a[:]     # Same as a[0:]
-print("Full name:", full_name)
+# Full string
+print(f"Full name: {first_name}")
 
-new = b[:]           # Prints full string
-print("Copied string:", new, "| Type:", type(new))
+# Type checking
+print(f"Type of first_name: {type(first_name)}")
 
-# Strings are immutable in Python (cannot be changed in place)
-hot = a[:]
-print("Hot:", hot, "| Type:", type(hot))
+# Demonstrating immutability
+modified_name = "U" + first_name[1:]
+print(f"Modified name: {modified_name}")
 
 # String concatenation
-best = a + b
-print("Concatenated name:", best)
+combined_name = first_name + duplicate_name
+print(f"Concatenated name: {combined_name}")
