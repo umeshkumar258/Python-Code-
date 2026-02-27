@@ -1,17 +1,21 @@
-a = "umesh"
+# String slicing examples (clean & corrected)
 
-print(a[-4:])   # same as a[1:] → "mesh"
-print(a[1:])    # "mesh"
+name = "umesh"
 
-print(a[-5:])   # full string → "umesh"
+# Basic slicing
+print(name[-4:])     # "mesh"
+print(name[1:])      # "mesh"
+print(name[-5:])     # "umesh"
+print(name[-1:])     # "h"
 
-print(a[-1:])   # last character → "h"
+# Step slicing
+print(name[0:6:2])   # "ueh"  (indices 0,2,4)
+print(name[0:7:6])   # "u"
 
-print(a[0:6:2])  # skip slicing → characters at indices 0,2,4 → "ues"
+# Negative slicing
+print(name[-2:])     # "sh"
+print(name[-2:-1])   # "s"
+print(name[1:2])     # "m"
 
-print(a[0:7:6])  # starts at 0, then jumps 6 steps → prints "u"
-
-print(a[-2:])   # last 2 characters → "sh"
-
-print(a[-2:-1]) # from -2 to -1 (excluding -1) → "s"
-print(a[1:2])   # from index 1 to 2 (excluding 2) → "m"
+# Bonus: Reverse string
+print(name[::-1])    # "hsemu"
