@@ -1,19 +1,36 @@
-a = "umesh is a good boy but\nhe has fear of \tfuture"
+# 1️⃣ Multiline string with escape characters
+a = "Umesh is a good boy but\nhe has fear of \tfuture."
+print("Sentence with escape characters:")
 print(a)
 
-b = "harry is best teacher of \"programming\" language"
+# 2️⃣ Using quotes inside string (better way)
+b = 'Harry is best teacher of "programming" language.'
+print("\nUsing quotes inside string:")
 print(b)
 
-letter = "Dear Harry,\nThis python course is nice.\tThanks!"
+# 3️⃣ Formal letter format
+letter = """Dear Harry,
+
+This Python course is nice.
+    Thanks!
+"""
+print("\nLetter format:")
 print(letter)
 
-import pyjokes
-joke = pyjokes.get_joke()
-print(joke)
+# 4️⃣ Using external library (pyjokes)
+try:
+    import pyjokes
+    joke = pyjokes.get_joke()
+    print("Random Joke:")
+    print(joke)
+except ImportError:
+    print("pyjokes module not installed. Install using: pip install pyjokes")
 
-name = "umesh"
-new = "babu\t" + name
+# 5️⃣ String concatenation
+name = "Umesh"
+new = f"Babu\t{name}"
+print("\nConcatenated string:")
 print(new)
 
-# Example of f-string usage
-print(f"My name is {name} and Python is awesome!")
+# 6️⃣ f-string (Professional way)
+print(f"\nMy name is {name} and Python is awesome!")
