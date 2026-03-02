@@ -1,21 +1,26 @@
-# Tuple declaration
-a = (4, 484, 2, 384, 2)
+def main():
+    # Tuple declaration
+    numbers = (4, 484, 2, 384, 2)
 
-# Set declaration (but later overwritten so not needed)
-b = {8}
+    print(f"Type of numbers: {type(numbers)}")
+    print(f"Value: {numbers}")
+    print(f"Length: {len(numbers)}")
 
-print("Type of a:", type(a), "| Value:", a)
-print("Length of tuple a:", len(a))
+    # Count occurrences
+    value_to_count = 2
+    print(f"Count of {value_to_count}: {numbers.count(value_to_count)}")
 
-# Count occurrences of value in tuple
-print("Count of 2 in tuple a:", a.count(2))
+    # Tuple repetition
+    repeated_tuple = numbers * 3
+    print(f"Tuple repeated 3 times: {repeated_tuple}")
 
-# Tuple repetition
-b = a * 3
-print("Tuple repeated 3 times:", b)
+    # Find first index safely
+    try:
+        index_value = numbers.index(value_to_count)
+        print(f"First index of {value_to_count}: {index_value}")
+    except ValueError:
+        print(f"{value_to_count} not found in tuple")
 
-# Finding first index of value
-print("Index of first occurrence of 2:", a.index(2))
 
-# NOTE:
-# Tuples are immutable - values cannot be changed or modified.
+if __name__ == "__main__":
+    main()
