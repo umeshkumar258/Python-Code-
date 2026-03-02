@@ -1,33 +1,35 @@
-# Dictionary creation
-marks = {
-    "umesh": "73",
-    "bab": "99",
-    "harry": "72"
-}
+def display_marks(data):
+    print(f"Dictionary: {data}")
+    print(f"Type: {type(data)}")
+    print(f"Length: {len(data)}")
 
-# Display dictionary and its type
-print("Dictionary:", marks)
-print("Type:", type(marks))
 
-# Key properties of dictionaries:
-# 1. Unordered (until Python 3.7: now maintains insertion order but conceptually unordered)
-# 2. Mutable
-# 3. Indexed by keys
-# 4. Duplicate keys are not allowed
+def main():
+    # Use integers for marks (not strings)
+    marks = {
+        "umesh": 73,
+        "bab": 99,
+        "harry": 72
+    }
 
-# Accessing values using keys
-print("Umesh's marks:", marks["umesh"])
-print("Length of dictionary:", len(marks))
+    display_marks(marks)
 
-# Accessing value using get() method (safer method)
-print("Bab's marks:", marks["bab"])
-print("Bab's marks (using get):", marks.get("bab"))
+    # Accessing values safely
+    print(f"Umesh's marks: {marks.get('umesh')}")
+    print(f"Bab's marks: {marks.get('bab')}")
 
-# Dictionary with list value
-student_data = {
-    "numbers": [939, 9303, 99],
-    "umesh": "939"
-}
+    # Safe access with default value
+    print(f"John's marks (default if missing): {marks.get('john', 'Not Found')}")
 
-print("Student Data:", student_data)
-print("Numbers list:", student_data["numbers"])
+    # Dictionary with list value
+    student_data = {
+        "numbers": [939, 9303, 99],
+        "umesh": 939
+    }
+
+    print(f"\nStudent Data: {student_data}")
+    print(f"Numbers list: {student_data['numbers']}")
+
+
+if __name__ == "__main__":
+    main()
