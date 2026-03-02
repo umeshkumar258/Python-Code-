@@ -1,28 +1,35 @@
-# Creating a dictionary
-marks = {"umesh": "73", "babu": "87", "harry": "88"}
+def main():
+    # Use integers for marks
+    marks = {
+        "umesh": 73,
+        "babu": 87,
+        "harry": 88
+    }
 
-# Display dictionary items, keys and values
-print("Items:", marks.items())    # (key, value) pairs
-print("Keys:", marks.keys())      # All keys
-print("Values:", marks.values())  # All values
+    # Display items
+    print(f"Items: {list(marks.items())}")
+    print(f"Keys: {list(marks.keys())}")
+    print(f"Values: {list(marks.values())}")
+    print(f"Number of students: {len(marks)}")
 
-# Length of dictionary
-print("Number of students:", len(marks))
+    # Safe access
+    print(f"Umesh's marks (before update): {marks.get('umesh')}")
 
-# Access value using get()
-print("Umesh's marks (before update):", marks.get("umesh"))
+    # Updating existing key
+    marks.update({"umesh": 89})
 
-# Updating values / adding new key-value pairs
-marks.update({"umesh": 89})   # updates existing key
-marks.update({"vinay": 99})   # adds new key
+    # Adding new key
+    marks["vinay"] = 99
 
-# Removing a key-value pair
-marks.pop("umesh")            # removes umesh
+    # Removing key safely
+    removed = marks.pop("umesh", None)
+    print(f"Removed value: {removed}")
 
-print("Updated dictionary:", marks)
+    print(f"Updated dictionary: {marks}")
 
-# Safe access using get()
-print("Unknown key:", marks.get("umesh4"))  # prints None
+    # Safe access
+    print(f"Unknown key: {marks.get('umesh4', 'Not Found')}")
 
-# Unsafe access (commented because it causes error)
-# print(marks["umesh4"])
+
+if __name__ == "__main__":
+    main()
