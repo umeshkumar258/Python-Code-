@@ -1,10 +1,17 @@
-print("📌 Phone Number Validation Program")
+try:
+    age = int(input("Enter your age: "))
 
-# Step 1: Take input as string
-phone = input("Enter your 10-digit phone number: ")
+    if age < 18:
+        print("You are too young to attend the event.")
 
-# Step 2: Validation
-if phone.isdigit() and len(phone) == 10 and phone[0] in "6789":
-    print("✔ Valid Indian phone number")
-else:
-    print("❌ Invalid phone number")
+    elif age == 20:
+        print("You can enter the event.")
+
+    elif age > 20:
+        print("You need a ticket to enter.")
+
+    else:
+        print("You can attend, but rules may apply.")
+
+except ValueError:
+    print("❗ Please enter a valid number for age.")
