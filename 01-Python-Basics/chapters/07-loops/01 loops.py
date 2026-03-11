@@ -1,3 +1,6 @@
-# Print even numbers from 0 to 8
-for number in range(0, 10, 2):
+start = 0
+end = 10
+step = 2
+
+for number in range(start, end, step):
     print(number)
