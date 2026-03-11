@@ -74,14 +74,3 @@ for i in range(3):
 # ----------------------------------------
 # 11. Create a list using range
 # ----------------------------------------
-numbers = list(range(1, 11))
-print("List created from range:", numbers)
-
-# ----------------------------------------
-# 12. Sum of numbers using a loop
-# ----------------------------------------
-total = 0
-for i in range(1, 11):
-    total += i
-
-print("Sum =", total)
