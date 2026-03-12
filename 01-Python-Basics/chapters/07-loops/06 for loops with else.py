@@ -7,39 +7,44 @@ print("List items:")
 for num in numbers:
     print(num)
 
-# ---------------------------------------
-# USER INPUT CHECK
-# ---------------------------------------
-try:
-    user_num = int(input("\nEnter a number to check in the list: "))
-
-    if user_num in numbers:
-        print("✔ It is there in the list!")
-    else:
-        print("✘ It is NOT in the list!")
-
-except ValueError:
-    print("Please enter a valid number!")
 
 # ---------------------------------------
-# EXTRA FEATURE 1 → Count how many times it appears
+# FUNCTION → Check number in list
 # ---------------------------------------
-print(f"Occurrence count: {numbers.count(user_num)}")
+def check_number(lst):
+    try:
+        user_num = int(input("\nEnter a number to check in the list: "))
+
+        if user_num in lst:
+            print("✔ It is in the list!")
+            print(f"Found at index: {lst.index(user_num)}")
+        else:
+            print("✘ It is NOT in the list!")
+
+        print(f"Occurrence count: {lst.count(user_num)}")
+
+    except ValueError:
+        print("Please enter a valid number!")
+
 
 # ---------------------------------------
-# EXTRA FEATURE 2 → Show index if it exists
+# FUNCTION → Add number to list
 # ---------------------------------------
-if user_num in numbers:
-    print(f"Found at index: {numbers.index(user_num)}")
+def add_number(lst):
+    try:
+        new_val = int(input("\nEnter a number to add to the list: "))
+        lst.append(new_val)
+        print("Updated list:", lst)
+
+    except ValueError:
+        print("Invalid input! Please enter a number.")
+
 
 # ---------------------------------------
-# EXTRA FEATURE 3 → Sorting the list
+# RUN PROGRAM
 # ---------------------------------------
+check_number(numbers)
+
 print("\nSorted list:", sorted(numbers))
 
-# ---------------------------------------
-# EXTRA FEATURE 4 → Add a new number to list
-# ---------------------------------------
-new_val = int(input("\nEnter a number to add to the list: "))
-numbers.append(new_val)
-print("Updated list:", numbers)
+add_number(numbers)
