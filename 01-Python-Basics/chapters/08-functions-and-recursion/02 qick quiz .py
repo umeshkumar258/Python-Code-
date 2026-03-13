@@ -3,12 +3,18 @@
 # ---------------------------------------
 def good_day(name):
     """Greets the user"""
-    print(f"Good morning, {name} 😊")
+    print(f"Good morning, {name}! 😊")
 
 
 # ---------------------------------------
-# Function Call using loop
+# Main Program
 # ---------------------------------------
-for i in range(3):
-    user_name = input("Enter your name: ")
-    good_day(user_name)
+def main():
+    for i in range(3):
+        name = input(f"Enter name {i+1}: ")
+        good_day(name)
+
+
+# Run the program
+if __name__ == "__main__":
+    main()
