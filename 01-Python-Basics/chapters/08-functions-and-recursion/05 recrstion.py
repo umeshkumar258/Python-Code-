@@ -1,29 +1,26 @@
 # ---------------------------------------
-# FACTORIAL PROGRAM (ALL IN ONE)
+# FACTORIAL PROGRAM (IMPROVED VERSION)
 # ---------------------------------------
 
-# 1️⃣ Factorial using Recursion
 def factorial_recursive(n):
-    """Returns factorial using recursion"""
-    if n == 0 or n == 1:        # Base case
+    """Return factorial using recursion."""
+    if n == 0 or n == 1:
         return 1
     return n * factorial_recursive(n - 1)
 
 
-# 2️⃣ Factorial using For Loop
 def factorial_for(n):
-    """Returns factorial using for loop"""
+    """Return factorial using a for loop."""
     result = 1
-    for i in range(1, n + 1):
+    for i in range(2, n + 1):
         result *= i
     return result
 
 
-# 3️⃣ Factorial using While Loop
 def factorial_while(n):
-    """Returns factorial using while loop"""
+    """Return factorial using a while loop."""
     result = 1
-    while n > 0:
+    while n > 1:
         result *= n
         n -= 1
     return result
@@ -32,16 +29,16 @@ def factorial_while(n):
 # ---------------------------------------
 # MAIN PROGRAM
 # ---------------------------------------
+
 number = int(input("Enter a number: "))
 
 if number < 0:
-    print("❌ Factorial is not defined for negative numbers.")
+    print("Factorial is not defined for negative numbers.")
 else:
-    print("\n✅ Factorial Results")
-    print("---------------------")
-    print("Using Recursion :", factorial_recursive(number))
-    print("Using For Loop  :", factorial_for(number))
-    print("Using While Loop:", factorial_while(number))
-
+    print("\nFactorial Results")
+    print("-------------------")
+    print(f"Using Recursion : {factorial_recursive(number)}")
+    print(f"Using For Loop  : {factorial_for(number)}")
+    print(f"Using While Loop: {factorial_while(number)}")
 
 print("\nEnd of the program")
