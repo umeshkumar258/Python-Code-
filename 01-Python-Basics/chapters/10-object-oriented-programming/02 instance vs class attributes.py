@@ -6,14 +6,17 @@ class Employee:
     language = "Python"
     salary = 1200000
 
+    def __init__(self, name=None, language=None):
+        # Instance attributes
+        self.name = name
+        if language is not None:
+            self.language = language   # overrides class attribute for this object
+
 
 # ---------------------------------------
 # OBJECT 1
 # ---------------------------------------
-umesh = Employee()
-
-# Creating an INSTANCE attribute (overrides class attribute for this object only)
-umesh.language = "Java"
+umesh = Employee(language="Java")
 
 print("Umesh Details:")
 print("Language:", umesh.language)   # Java (instance attribute)
@@ -24,10 +27,7 @@ print()
 # ---------------------------------------
 # OBJECT 2
 # ---------------------------------------
-babu = Employee()
-
-# Creating a new instance attribute
-babu.name = "Babu"
+babu = Employee(name="Babu")
 
 print("Babu Details:")
 print("Name    :", babu.name)        # instance attribute
