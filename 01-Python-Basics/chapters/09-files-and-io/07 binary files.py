@@ -1,32 +1,41 @@
 # ---------------------------------------
-# ALL IN ONE FILE HANDLING PROGRAM
+# ALL-IN-ONE FILE HANDLING PROGRAM
 # ---------------------------------------
 
-# 1️⃣ READ A BINARY FILE (Image, Audio, etc.)
-try:
-    with open("appu.jpg", "rb") as file:
-        binary_data = file.read()
-        print("Binary file read successfully")
-        print("Binary data size:", len(binary_data), "bytes")
+def read_binary_file(file_path):
+    """Read a binary file and display its size."""
+    try:
+        with open(file_path, "rb") as file:
+            data = file.read()
+            print(f"✅ Binary file '{file_path}' read successfully.")
+            print(f"📦 Binary data size: {len(data)} bytes")
+    except FileNotFoundError:
+        print(f"❌ Binary file '{file_path}' not found.")
+    except Exception as error:
+        print(f"⚠️ Error while reading binary file: {error}")
 
-except FileNotFoundError:
-    print("❌ Binary file not found")
+
+def read_text_file(file_path):
+    """Read a text file and display its content."""
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            content = file.read()
+            print(f"\n✅ Text file '{file_path}' read successfully.")
+            print("📄 Text file content:")
+            print(content)
+    except FileNotFoundError:
+        print(f"❌ Text file '{file_path}' does not exist.")
+    except Exception as error:
+        print(f"⚠️ Error while reading text file: {error}")
 
 
 # ---------------------------------------
-# 2️⃣ READ A TEXT FILE WITH ERROR HANDLING
+# MAIN PROGRAM
 # ---------------------------------------
-try:
-    with open("nfile.txt", "r") as file:
-        content = file.read()
-        print("\nText file content:")
-        print(content)
+binary_file_path = "appu.jpg"
+text_file_path = "nfile.txt"
 
-except FileNotFoundError:
-    print("❌ The text file does not exist")
+read_binary_file(binary_file_path)
+read_text_file(text_file_path)
 
-
-# ---------------------------------------
-# END OF PROGRAM
-# ---------------------------------------
-print("\n✅ Program finished successfully")
+print("\n✅ Program finished successfully.")
