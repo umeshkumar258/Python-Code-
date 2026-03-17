@@ -2,24 +2,25 @@
 # CLASS DEFINITION
 # ---------------------------------------
 class Employee:
-    # Class attributes
-    language = "Python"
-    salary = 1200000
+    """Employee class to store employee details"""
 
-    # Constructor (dunder method)
-    def __init__(self, name, salary, language):
-        self.name = name          # instance attribute
-        self.salary = salary      # instance attribute
-        self.language = language  # instance attribute
-        print("I am creating an object")
+    # Class attributes (defaults)
+    default_language = "Python"
+    default_salary = 1200000
+
+    # Constructor
+    def __init__(self, name, salary=None, language=None):
+        self.name = name
+        self.salary = salary if salary is not None else Employee.default_salary
+        self.language = language if language is not None else Employee.default_language
 
     # Instance method
-    def getInfo(self):
+    def get_info(self):
         print(f"Name     : {self.name}")
         print(f"Language : {self.language}")
         print(f"Salary   : {self.salary}")
 
-    # Static method (no self)
+    # Static method
     @staticmethod
     def greet():
         print("Good morning")
@@ -34,9 +35,9 @@ umesh = Employee("Umesh", 130000, "JavaScript")
 # METHOD CALLS
 # ---------------------------------------
 print("\nUsing object:")
-umesh.getInfo()
-umesh.greet()
+umesh.get_info()
+Employee.greet()   # better practice
 
 print("\nUsing class:")
-Employee.getInfo(umesh)
+Employee.get_info(umesh)
 Employee.greet()
