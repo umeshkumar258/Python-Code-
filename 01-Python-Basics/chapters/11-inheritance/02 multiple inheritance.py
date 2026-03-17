@@ -2,9 +2,9 @@
 # BASE CLASS 1
 # ---------------------------------------
 class Employee:
-    company = "IYC"
-    name = "Umesh"
-    salary = 8999999
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
 
     def show(self):
         print(f"Employee Name : {self.name}")
@@ -15,7 +15,8 @@ class Employee:
 # BASE CLASS 2
 # ---------------------------------------
 class Coder:
-    language = "Python"
+    def __init__(self, language):
+        self.language = language
 
     def print_languages(self):
         print(f"Known Language: {self.language}")
@@ -27,6 +28,11 @@ class Coder:
 class Programmer(Employee, Coder):
     company = "ITC Infotech"
 
+    def __init__(self, name, salary, language):
+        # Initialize both parent classes
+        Employee.__init__(self, name, salary)
+        Coder.__init__(self, language)
+
     def show_company(self):
         print(f"Company       : {self.company}")
 
@@ -34,13 +40,12 @@ class Programmer(Employee, Coder):
 # ---------------------------------------
 # OBJECT CREATION
 # ---------------------------------------
-a = Employee()
-b = Programmer()
+b = Programmer("Umesh", 8999999, "Python")
 
 # ---------------------------------------
 # METHOD CALLS
 # ---------------------------------------
 print("Using Programmer object:\n")
-b.show()              # From Employee
-b.print_languages()   # From Coder
-b.show_company()      # From Programmer
+b.show()
+b.print_languages()
+b.show_company()
