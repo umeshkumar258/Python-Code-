@@ -1,12 +1,5 @@
 
-def generate_table(n, limit=10):
-    return [n * i for i in range(1, limit + 1)]
 
-
-def display_table(n, limit=10):
-    print("\n📘 Formatted Table:")
-    for i in range(1, limit + 1):
-        print(f"{n} × {i} = {n * i}")
 
 
 
