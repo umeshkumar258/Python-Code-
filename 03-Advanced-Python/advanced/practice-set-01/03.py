@@ -1,35 +1,36 @@
 # ---------------------------------------
-# MULTIPLICATION TABLE - ALL IN ONE
+# MULTIPLICATION TABLE - IMPROVED
 # ---------------------------------------
 
-# Take input
-n = int(input("Enter the number: "))
+def generate_table(n, limit=10):
+    return [n * i for i in range(1, limit + 1)]
+
+
+def display_table(n, limit=10):
+    print("\n📘 Formatted Table:")
+    for i in range(1, limit + 1):
+        print(f"{n} × {i} = {n * i}")
+
 
 # ---------------------------------------
-# 1️⃣ Using list comprehension
+# MAIN PROGRAM
 # ---------------------------------------
-table = [n * i for i in range(1, 11)]
-print("\nTable using list comprehension:")
-print(table)
+try:
+    n = int(input("Enter the number: "))
+except ValueError:
+    print("❌ Please enter a valid integer.")
+else:
+    table = generate_table(n)
 
-# ---------------------------------------
-# 2️⃣ Display table line by line
-# ---------------------------------------
-print("\nFormatted table:")
-for i in range(1, 11):
-    print(f"{n} x {i} = {n * i}")
+    print("\n📋 Table (list comprehension):")
+    print(table)
 
-# ---------------------------------------
-# 3️⃣ Using for loop to store table
-# ---------------------------------------
-table_loop = []
-for i in range(1, 11):
-    table_loop.append(n * i)
+    display_table(n)
 
-print("\nTable using for loop:")
-print(table_loop)
+    print("\n📋 Table (using loop):")
+    table_loop = []
+    for i in range(1, 11):
+        table_loop.append(n * i)
+    print(table_loop)
 
-# ---------------------------------------
-# END OF PROGRAM
-# ---------------------------------------
 print("\n✅ End of program")
