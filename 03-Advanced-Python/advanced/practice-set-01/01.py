@@ -1,19 +1,13 @@
-try:
-    with open("9.txt", "r") as f:
-        print(f.read())
-except Exception as e:
-    print(e)
+files = ["9.txt", "0.txt", "6.txt"]
 
-try:
-    with open("0.txt", "r") as f:
-        print(f.read())
-except Exception as e:
-    print(e)
+for file in files:
+    try:
+        with open(file, "r") as f:
+            print(f"\n📄 Reading {file}:")
+            print(f.read())
+    except FileNotFoundError:
+        print(f"❌ {file} not found")
+    except Exception as e:
+        print(f"⚠ Error in {file}: {e}")
 
-try:
-    with open("6.txt", "r") as f:
-        print(f.read())
-except Exception as e:
-    print(e)
-
-print("Thanks")
+print("\n🙏 Thanks")
