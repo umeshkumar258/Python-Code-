@@ -2,48 +2,60 @@
 # BASE CLASS
 # ---------------------------------------
 class Employee:
-    a = 1
+    def __init__(self):
+        self.a = 1
+
+    def show(self):
+        print(f"a = {self.a}")
 
 
 # ---------------------------------------
 # CHILD CLASS (inherits Employee)
 # ---------------------------------------
 class Programmer(Employee):
-    b = 2
+    def __init__(self):
+        super().__init__()   # Call parent constructor
+        self.b = 2
+
+    def show(self):
+        super().show()
+        print(f"b = {self.b}")
 
 
 # ---------------------------------------
 # GRANDCHILD CLASS (inherits Programmer)
 # ---------------------------------------
 class Manager(Programmer):
-    c = 3
+    def __init__(self):
+        super().__init__()
+        self.c = 3
+
+    def show(self):
+        super().show()
+        print(f"c = {self.c}")
 
 
 # ---------------------------------------
 # OBJECT OF Employee
 # ---------------------------------------
-o1 = Employee()
 print("Employee object:")
-print("a =", o1.a)
-# print(o1.b)  # ❌ Error: Employee has no attribute 'b'
+o1 = Employee()
+o1.show()
 print()
 
 
 # ---------------------------------------
 # OBJECT OF Programmer
 # ---------------------------------------
-o2 = Programmer()
 print("Programmer object:")
-print("a =", o2.a)   # inherited from Employee
-print("b =", o2.b)   # from Programmer
+o2 = Programmer()
+o2.show()
 print()
 
 
 # ---------------------------------------
 # OBJECT OF Manager
 # ---------------------------------------
-o3 = Manager()
 print("Manager object:")
-print("a =", o3.a)   # inherited from Employee
-print("b =", o3.b)   # inherited from Programmer
-print("c =", o3.c)   # from Manager
+o3 = Manager()
+o3.show()
