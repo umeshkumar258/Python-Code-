@@ -2,21 +2,29 @@ import time
 import datetime
 
 
-def set_alarm(alarm_time):
+def set_alarm(alarm_time_str):
+    try:
+        # Convert string to time object
+        alarm_time = datetime.datetime.strptime(alarm_time_str, "%H:%M:%S").time()
+    except ValueError:
+        print("❌ Invalid format! Use HH:MM:SS")
+        return
+
     print(f"\n⏰ Alarm set for {alarm_time}")
     print("Waiting for alarm...\n")
 
     while True:
-        # Get current time in HH:MM:SS format
-        current_time = datetime.datetime.now().strftime("%H:%M:%S")
-        print("Current Time:", current_time)
+        now = datetime.datetime.now()
+        current_time = now.time()
 
-        # Check if alarm time matches current time
-        if current_time == alarm_time:
+        print("Current Time:", now.strftime("%H:%M:%S"))
+
+        # Better condition (not exact match)
+        if current_time >= alarm_time:
             print("\n🔔 WAKE UP! Alarm ringing 🔔")
             break
 
-        time.sleep(1)   # wait for 1 second
+        time.sleep(1)
 
 
 # Main program
