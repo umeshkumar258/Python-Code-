@@ -1,6 +1,4 @@
-# ---------------------------------------
-# STUDENT DETAILS PROGRAM
-# ---------------------------------------
+
 
 name = input("Enter the name: ")
 marks = int(input("Enter the marks: "))
@@ -12,3 +10,5 @@ s = "The name of the student is {}, his marks are {}, and phone number is {}.".f
 )
 
 print(s)
+
+print("progarm ending")
