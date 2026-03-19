@@ -1,6 +1,4 @@
-# ---------------------------------------
-# DIVISION WITH TRY-EXCEPT
-# ---------------------------------------
+
 
 try:
     a = int(input("Enter the first number: "))
@@ -18,5 +16,3 @@ except ValueError:
 else:
     print("✅ Division successful.")
 
-finally:
-    print("Thanks")
