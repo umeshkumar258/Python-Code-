@@ -1,8 +1,6 @@
-# ---------------------------------------
-# MULTIPLICATION TABLE USING JOIN
-# ---------------------------------------
 
-n = 7
+
+n = int(input("Enter the number : "))
 
 table = [str(n * i) for i in range(1, 11)]
 
