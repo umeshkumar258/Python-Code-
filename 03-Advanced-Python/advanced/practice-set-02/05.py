@@ -9,3 +9,5 @@ def greater(x, y):
 maximum = reduce(greater, numbers)
 
 print("Maximum value:", maximum)
+
+print("finished ")
