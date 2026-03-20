@@ -1,6 +1,4 @@
-# ---------------------------------------
-# FUNCTION TO CHECK DIVISIBLE BY 5
-# ---------------------------------------
+
 def divisible_by_5(n):
     return n % 5 == 0
 
@@ -27,3 +25,6 @@ print("Divisible by 5 (filter + lambda):", result_lambda)
 # ---------------------------------------
 result_comp = [x for x in a if x % 5 == 0]
 print("Divisible by 5 (list comprehension):", result_comp)
+
+
+print("All is well")
