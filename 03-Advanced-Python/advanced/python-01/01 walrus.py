@@ -54,3 +54,6 @@ print("\nMaximum value:", maximum)
 length = len(values)
 if length > 3:
     print(f"Values list has {length} elements")
+
+else:
+    print("it less than 3")
