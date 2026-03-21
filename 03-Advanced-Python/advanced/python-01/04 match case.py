@@ -40,3 +40,5 @@ merged2 = dict1 | dict3
 
 print("\nMerged with same key:")
 print(merged2)
+
+print("program ended")
