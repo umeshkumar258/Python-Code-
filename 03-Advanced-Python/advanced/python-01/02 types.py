@@ -1,7 +1,7 @@
 # -------------------------------
 # 1. Variable Type Hints
 # -------------------------------
-
+marks: int = 300
 age: int = 18
 name: str = "Umesh"
 height: float = 5.8
@@ -9,7 +9,7 @@ is_student: bool = True
 
 print(name, type(name))
 print(age, type(age))
-
+print(marks,type(marks))
 
 # -------------------------------
 # 2. Function Type Hints
