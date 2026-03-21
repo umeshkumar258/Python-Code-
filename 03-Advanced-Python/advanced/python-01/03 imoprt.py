@@ -51,3 +51,5 @@ for student, marks in scores.items():
 print("\nType of numbers:", type(numbers))
 print("Type of person:", type(person))
 print("Type of scores:", type(scores))
+
+print("Thanks for coding")
