@@ -1,6 +1,7 @@
 try:
     # Taking input from the user and converting it to integer
     a = int(input("Hey, enter a number: "))
+    b = int(input("enter new number: "))
     
     # If conversion is successful, print the number
     print("You entered:", a)
