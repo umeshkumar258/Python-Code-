@@ -28,3 +28,5 @@ def get_number():
 
 # Function call
 get_number()
+
+print("Thanks")
