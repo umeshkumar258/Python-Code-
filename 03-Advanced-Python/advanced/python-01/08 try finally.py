@@ -23,3 +23,5 @@ def main():
 
 # Function call
 main()
+
+print("Thanks for writing the code")
