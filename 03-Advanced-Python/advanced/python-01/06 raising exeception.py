@@ -15,3 +15,5 @@ except ZeroDivisionError as e:
 
 finally:
     print("Program finished safely.")
+
+print("program ended")
