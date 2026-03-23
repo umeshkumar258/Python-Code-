@@ -1,5 +1,5 @@
 a = 77   # Global variable
-
+b = 332
 def fun():
     global a   # Refers to the global variable 'a'
     a = 3      # Modifies the global variable
@@ -7,3 +7,5 @@ def fun():
 
 fun()          # Function call
 print(a)       # Prints global 'a'
+
+print(type(b))
