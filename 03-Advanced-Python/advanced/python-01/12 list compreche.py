@@ -17,3 +17,6 @@ print("Original list              :", my_list)
 print("Squared list (for loop)    :", squared_list_loop)
 print("Squared list (comprehension):", squared_list_comprehension)
 print("Squared list (map method)  :", squared_list_map)
+
+
+print("Good bye")
