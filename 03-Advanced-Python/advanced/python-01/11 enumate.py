@@ -10,3 +10,5 @@ for item in nums:
 print("\nUsing enumerate function:")
 for index, item in enumerate(nums):
     print(f"The item number at index {index} is {item}")
+
+print("Thanks for codeing")
