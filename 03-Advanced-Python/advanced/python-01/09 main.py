@@ -9,3 +9,5 @@ def main():
 
 # Program starts here
 main()
+
+print("It is myfunc model")
