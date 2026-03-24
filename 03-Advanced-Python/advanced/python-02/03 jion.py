@@ -7,3 +7,5 @@ joined_names = "::".join(names)
 # Output
 print("Original list :", names)
 print("Joined string :", joined_names)
+
+print(type(names))
