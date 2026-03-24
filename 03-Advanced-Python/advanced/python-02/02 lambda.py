@@ -12,3 +12,6 @@ num = 7
 
 print("Square using normal function :", square_function(num))
 print("Square using lambda function :", square_lambda(num))
+
+
+print(type(num))
