@@ -10,6 +10,7 @@ is_student: bool = True
 print(name, type(name))
 print(age, type(age))
 print(marks,type(marks))
+print(height, type(height))
 
 # -------------------------------
 # 2. Function Type Hints
