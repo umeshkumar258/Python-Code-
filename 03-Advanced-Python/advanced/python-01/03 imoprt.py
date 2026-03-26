@@ -53,3 +53,4 @@ print("Type of person:", type(person))
 print("Type of scores:", type(scores))
 
 print("Thanks for coding")
+print("good bye")
