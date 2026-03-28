@@ -1,11 +1,10 @@
-# List of strings
-names = ["umesh", "babu", "janvin"]
+# Take input from user
+names = input("Enter names separated by space: ").split()
 
-# Join list elements using "::" as separator
+# Join list elements using "::"
 joined_names = "::".join(names)
 
 # Output
-print("Original list :", names)
-print("Joined string :", joined_names)
-
-print(type(names))
+print(f"Original list: {names}")
+print(f"Joined string: {joined_names}")
+print(f"Type of names: {type(names)}")
