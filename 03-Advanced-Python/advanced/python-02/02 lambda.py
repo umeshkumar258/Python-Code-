@@ -1,17 +1,14 @@
-# Normal function to find square
 def square_function(n):
     return n * n
 
-
-# Lambda function to find square
 square_lambda = lambda n: n * n
 
+try:
+    num = int(input("Enter a number: "))
 
-# Testing both methods
-num = 7
+    print(f"Square using normal function: {square_function(num)}")
+    print(f"Square using lambda function: {square_lambda(num)}")
+    print(f"Type of input: {type(num)}")
 
-print("Square using normal function :", square_function(num))
-print("Square using lambda function :", square_lambda(num))
-
-
-print(type(num))
+except ValueError:
+    print("Please enter a valid integer.")
