@@ -43,3 +43,4 @@ for w in text.split():
 
 # Add a decorative line
 print("\n✨ End of Program ✨")
+print("it is good")
