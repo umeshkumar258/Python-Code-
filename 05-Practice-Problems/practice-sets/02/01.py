@@ -1,28 +1,43 @@
-# Program to add two numbers with validation and extra details
+def get_integer(prompt):
+    """Function to safely get integer input from user"""
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("❌ Invalid input! Please enter an integer.\n")
+
+
+def check_even_odd(number):
+    """Function to check if number is even or odd"""
+    return "EVEN" if number % 2 == 0 else "ODD"
+
 
 def add_numbers():
-    try:
-        # Taking input from user
-        a = int(input("Enter the first number: "))
-        b = int(input("Enter the second number: "))
+    """Main function to add two numbers"""
+    print("\n🔢 Addition Program with Validation")
 
-        # Performing addition
-        result = a + b
+    a = get_integer("Enter the first number: ")
+    b = get_integer("Enter the second number: ")
 
-        # Displaying result
-        print("\n--- Result ---")
-        print(f"First Number : {a}")
-        print(f"Second Number: {b}")
-        print(f"Sum          : {result}")
+    result = a + b
 
-        # Extra feature: check even or odd
-        if result % 2 == 0:
-            print("The sum is EVEN.")
-        else:
-            print("The sum is ODD.")
+    print("\n--- Result ---")
+    print(f"First Number : {a}")
+    print(f"Second Number: {b}")
+    print(f"Sum          : {result}")
+    print(f"The sum is {check_even_odd(result)}.")
 
-    except ValueError:
-        print("❌ Please enter valid integer numbers only.")
 
-# Function call
-add_numbers()
+def main():
+    """Main control loop"""
+    while True:
+        add_numbers()
+
+        choice = input("\nDo you want to continue? (y/n): ").lower()
+        if choice != 'y':
+            print("👋 Exiting program. Goodbye!")
+            break
+
+
+# Run program
+main()
