@@ -1,42 +1,66 @@
-# ALL IN ONE PYTHON PROGRAM
+def get_integer(prompt):
+    """Safely get integer input"""
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("❌ Invalid input! Please enter an integer.\n")
 
-# 1. Taking integer input
-try:
-    a = int(input("Enter the first number: "))
-    b = int(input("Enter the second number: "))
 
+def basic_operations(a, b):
+    """Perform addition and remainder"""
     print("\n--- BASIC OPERATIONS ---")
-
-    # 2. Addition
     print(f"Addition ({a} + {b}) = {a + b}")
 
-    # 3. Remainder
     if b != 0:
         print(f"Remainder ({a} % {b}) = {a % b}")
     else:
         print("Remainder: Cannot divide by zero")
 
-    # 4. Comparison
-    print("\n--- COMPARISON ---")
-    print(f"Is {a} < {b}? :", a < b)
-    print(f"Is {a} > {b}? :", a > b)
-    print(f"Is {a} == {b}? :", a == b)
 
-    # 5. Type conversion
+def comparison(a, b):
+    """Compare two numbers"""
+    print("\n--- COMPARISON ---")
+    print(f"Is {a} < {b}?  : {a < b}")
+    print(f"Is {a} > {b}?  : {a > b}")
+    print(f"Is {a} == {b}? : {a == b}")
+
+
+def type_conversion():
+    """Demonstrate type conversion"""
     x = 48.39
     y = str(x)
 
     print("\n--- TYPE CONVERSION ---")
-    print("Original value:", x)
-    print("Converted value:", y)
-    print("Type after conversion:", type(y))
+    print(f"Original Value      : {x} ({type(x)})")
+    print(f"Converted Value     : {y} ({type(y)})")
 
-    # 6. Even or Odd check
+
+def even_odd(a, b):
+    """Check if sum is even or odd"""
     print("\n--- EVEN / ODD CHECK ---")
-    if (a + b) % 2 == 0:
-        print("Sum is EVEN")
-    else:
-        print("Sum is ODD")
+    result = a + b
+    print(f"Sum = {result}")
 
-except ValueError:
-    print("❌ Please enter valid integer numbers only.")
+    if result % 2 == 0:
+        print("The sum is EVEN")
+    else:
+        print("The sum is ODD")
+
+
+def main():
+    print("🔢 ALL-IN-ONE PYTHON PROGRAM")
+
+    a = get_integer("Enter the first number: ")
+    b = get_integer("Enter the second number: ")
+
+    basic_operations(a, b)
+    comparison(a, b)
+    type_conversion()
+    even_odd(a, b)
+
+    print("\n✅ Program executed successfully!")
+
+
+# Run program
+main()
