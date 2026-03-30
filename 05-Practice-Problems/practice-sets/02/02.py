@@ -1,15 +1,48 @@
-# Program to find remainder of two numbers
+def get_integer(prompt):
+    """Safely get integer input from user"""
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("❌ Invalid input! Please enter an integer.\n")
 
-try:
-    a = int(input("Enter the first number: "))
-    b = int(input("Enter the second number: "))
 
-    # Check for division by zero
+def find_remainder(a, b):
+    """Return remainder if valid"""
     if b == 0:
+        return None
+    return a % b
+
+
+def display_result(a, b, remainder):
+    """Display formatted result"""
+    print("\n--- Result ---")
+    print(f"First Number : {a}")
+    print(f"Second Number: {b}")
+
+    if remainder is None:
         print("❌ Cannot find remainder when divisor is zero.")
     else:
-        remainder = a % b
-        print(f"\n{remainder} is the remainder when {a} is divided by {b}")
+        print(f"Remainder    : {remainder}")
+        print(f"{remainder} is the remainder when {a} is divided by {b}")
 
-except ValueError:
-    print("❌ Please enter valid integer numbers only.")
+
+def main():
+    """Main control loop"""
+    print("🔢 Remainder Program with Validation")
+
+    while True:
+        a = get_integer("Enter the first number: ")
+        b = get_integer("Enter the second number: ")
+
+        remainder = find_remainder(a, b)
+        display_result(a, b, remainder)
+
+        choice = input("\nDo you want to continue? (y/n): ").lower()
+        if choice != 'y':
+            print("👋 Exiting program. Goodbye!")
+            break
+
+
+# Run program
+main()
