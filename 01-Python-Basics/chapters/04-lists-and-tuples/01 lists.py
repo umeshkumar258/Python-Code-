@@ -1,37 +1,46 @@
-# A list can store different data types
-items = ["Umesh", "orange", 6, 83, "Harry", 999]
+def main():
+    # A list can store different data types
+    items = ["Umesh", "orange", 6, 83, "Harry", 999]
 
-print("Original List:", items)
-print("Type of variable:", type(items))
+    print("📌 Original List:", items)
+    print("📌 Type of variable:", type(items))
 
-# Indexing
-print("First element:", items[0])
+    # Indexing
+    print("\n🔹 Indexing")
+    print("First element:", items[0])
+    print("Last element:", items[-1])
 
-# Lists are mutable
-items[0] = "Appu"
-print("After updating first element:", items[0])
+    # Lists are mutable
+    print("\n🔹 Updating Elements")
+    items[0] = "Appu"
+    print("After updating first element:", items)
 
-# Access last element
-print("Last element:", items[-1])
+    # List slicing
+    print("\n🔹 Slicing")
+    print("From index 0 to end:", items[0:])
+    print("Full list copy:", items[:])
+    print("Slice [1:3]:", items[1:3])
 
-# List slicing
-print("From index 0 to end:", items[0:])
-print("Full list copy:", items[:])
+    # Append new value
+    print("\n🔹 Append Operation")
+    items.append("UmeshKumar")
+    print("After append:", items)
 
-# Append new value
-items.append("UmeshKumar")
-print("After append:", items)
+    # Modify another element
+    items[3] = "Umesh"
+    print("After modifying index 3:", items)
 
-# Slice example
-print("Slice [1:3] ->", items[1:3])
+    # Another list example
+    print("\n🔹 Another List Example")
+    friends = ["John", "Doe", "Alice", "Bob"]
+    print("Friends list:", friends)
+    print("Friends slice [1:3]:", friends[1:3])
 
-# Another list example
-friends = ["John", "Doe", "Alice", "Bob"]
+    print("\n✅ Final Output")
+    print("Items list:", items)
+    print("Friends list:", friends)
 
-print("Friends slice [1:3] ->", friends[1:3])
 
-# Modify element
-items[3] = "Umesh"
-print("Updated items list:", items)
-
-print("Final friends list:", friends)
+# Run the program
+if __name__ == "__main__":
+    main()
