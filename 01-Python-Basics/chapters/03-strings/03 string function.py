@@ -1,16 +1,25 @@
-# String methods example
-
+# ── String Methods ─────────────────────────────────────────────
 name = "harry"
 
-print(f"Length: {len(name)}")                       # Number of characters
-print(f"Capitalize: {name.capitalize()}")           # First letter capital
-print(f"Ends with 'ry': {name.endswith('ry')}")
-print(f"Starts with 'h': {name.startswith('h')}")
-print(f"Count of 'r': {name.count('r')}")           # Count occurrences
-print(f"First index of 'r': {name.find('r')}")      # Returns index or -1
-print(f"Uppercase: {name.upper()}")
-print(f"Lowercase: {name.lower()}")
-print(f"Replace name: {name.replace('harry', 'umesh')}")
+# ── Introspection ──────────────────────────────────────────────
+print(f"Original  : {name!r}")               # repr shows quotes → confirms it's a str
+print(f"Type      : {type(name).__name__}")  # 'str' instead of <class 'str'>
+print(f"Length    : {len(name)}")            # number of characters
 
-print(f"Original string: {name} | Type: {type(name)}")
-print(f"Index of 'h': {name.find('h')}")
+# ── Case methods ───────────────────────────────────────────────
+print(f"Upper     : {name.upper()}")         # "HARRY"
+print(f"Lower     : {name.lower()}")         # "harry"
+print(f"Capitalize: {name.capitalize()}")    # "Harry" — only first letter up
+
+# ── Search & match ─────────────────────────────────────────────
+print(f"find 'h'  : {name.find('h')}")       # index 0  — returns -1 if not found
+print(f"find 'r'  : {name.find('r')}")       # index 2  — first occurrence only
+print(f"count 'r' : {name.count('r')}")      # 2        — total occurrences
+
+# ── Boolean checks ─────────────────────────────────────────────
+print(f"starts 'h': {name.startswith('h')}") # True
+print(f"ends 'ry' : {name.endswith('ry')}")  # True
+
+# ── Transformation ─────────────────────────────────────────────
+print(f"Replace   : {name.replace('harry', 'umesh')}")  # "umesh"
+print(f"Original  : {name!r}")               # unchanged — strings are immutable
