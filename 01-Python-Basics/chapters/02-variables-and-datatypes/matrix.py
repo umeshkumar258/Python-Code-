@@ -1,21 +1,31 @@
-def is_leap_year(year):
+"""
+Author: Umesh Kumar J B
+Description: Program to check whether a year is a leap year.
+"""
+
+
+def is_leap_year(year: int) -> bool:
     """
-    Returns True if the given year is a leap year,
-    otherwise returns False.
+    Return True if the given year is a leap year, else False.
     """
-    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
-        return True
-    return False
+    return (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0)
 
 
-# Take user input
-try:
-    year = int(input("Enter a year: "))
+def get_valid_year() -> int:
+    """Take valid year input from the user."""
+    while True:
+        try:
+            return int(input("Enter a year: "))
+        except ValueError:
+            print("Invalid input! Please enter a numeric year.\n")
 
-    if is_leap_year(year):
-        print(f"{year} is a leap year.")
-    else:
-        print(f"{year} is not a leap year.")
 
-except ValueError:
-    print("Please enter a valid numeric year.")
+def main() -> None:
+    year = get_valid_year()
+
+    result = "a leap year" if is_leap_year(year) else "not a leap year"
+    print(f"{year} is {result}.")
+
+
+if __name__ == "__main__":
+    main()
