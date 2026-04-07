@@ -1,21 +1,30 @@
 """
 Author: Umesh Kumar J B
-Description: Demonstrating basic Python data types
+Description: Demonstrates basic Python data types in a clean and structured way.
 """
 
-def display_value_and_type(value):
-    """Print value and its data type."""
-    print(f"Value: {value} | Type: {type(value)}")
+from typing import Any
 
 
-def main():
-    a = "umesh"      # String
-    b = 3            # Integer
-    c = 49.48        # Float
-    d = True         # Boolean
-    e = None         # NoneType
+def display_value_and_type(value: Any) -> None:
+    """Print the value along with its data type."""
+    print(f"Value: {value!r:<10} | Type: {type(value).__name__}")
 
-    variables = [a, b, c, d, e]
+
+def main() -> None:
+    """Main function to demonstrate different data types."""
+    
+    # Define variables of different data types
+    string_val: str = "umesh"
+    int_val: int = 3
+    float_val: float = 49.48
+    bool_val: bool = True
+    none_val: None = None
+
+    # Store values in a tuple (immutable collection)
+    variables = (string_val, int_val, float_val, bool_val, none_val)
+
+    print("\n--- Python Data Types Demonstration ---\n")
 
     for item in variables:
         display_value_and_type(item)
