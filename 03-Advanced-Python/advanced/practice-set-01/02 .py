@@ -1,9 +1,9 @@
 # ---------------------------------------
-# ALL IN ONE PROGRAM (Improved)
+# ALL IN ONE PROGRAM (Optimized)
 # ---------------------------------------
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-target_indices = (2, 4, 6)
+numbers = list(range(1, 10))   # Cleaner way to create list
+target_indices = {2, 4, 6}     # Use set → faster lookup
 
 print("📋 List:", numbers)
 
@@ -18,19 +18,15 @@ for index, item in enumerate(numbers):
 
 
 # ---------------------------------------
-# 2️⃣ Using range()
+# 2️⃣ Using slicing (better than range)
 # ---------------------------------------
-print("\n🔹 Using range():")
-for i in range(2, len(numbers), 2):
-    print(numbers[i])
+print("\n🔹 Using slicing:")
+print(*numbers[2::2])   # start=2, step=2
 
 
 # ---------------------------------------
 # 3️⃣ Using list comprehension
 # ---------------------------------------
 print("\n🔹 Using list comprehension:")
-selected = [numbers[i] for i in target_indices]
+selected = [numbers[i] for i in sorted(target_indices) if i < len(numbers)]
 print(selected)
-
-
-
