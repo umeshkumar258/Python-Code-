@@ -8,16 +8,24 @@ Description: Demonstrates different types of functions in Python
 # ---------------------------------------
 # 1. Function with user input
 # ---------------------------------------
-def good_day():
+def get_user_name() -> str:
+    """Takes user input and returns the name."""
+    while True:
+        name = input("Enter your name: ").strip()
+        if name:
+            return name
+        print("❌ Name cannot be empty. Please try again.")
+
+
+def good_day(name: str) -> None:
     """Greets the user with their name."""
-    user = input("Enter your name: ")
-    print(f"Good day, {user}! 😊")
+    print(f"Good day, {name}! 😊")
 
 
 # ---------------------------------------
 # 2. Simple function (no parameters)
 # ---------------------------------------
-def show_message():
+def show_message() -> None:
     """Displays a simple message."""
     print("This is a simple function.")
 
@@ -25,7 +33,7 @@ def show_message():
 # ---------------------------------------
 # 3. Function with parameters
 # ---------------------------------------
-def greet(name):
+def greet(name: str) -> None:
     """Greets a user using their name."""
     print(f"Hello, {name}! Welcome to Python.")
 
@@ -33,7 +41,7 @@ def greet(name):
 # ---------------------------------------
 # 4. Function with return value
 # ---------------------------------------
-def add(a, b):
+def add(a: int, b: int) -> int:
     """Returns the sum of two numbers."""
     return a + b
 
@@ -41,7 +49,7 @@ def add(a, b):
 # ---------------------------------------
 # 5. Default parameter
 # ---------------------------------------
-def country_name(country="India"):
+def country_name(country: str = "India") -> None:
     """Prints the country name."""
     print(f"I am from {country}.")
 
@@ -49,7 +57,7 @@ def country_name(country="India"):
 # ---------------------------------------
 # 6. Function used inside a loop
 # ---------------------------------------
-def square(num):
+def square(num: int) -> int:
     """Returns the square of a number."""
     return num * num
 
@@ -63,22 +71,27 @@ multiply = lambda x, y: x * y
 # ---------------------------------------
 # Main Program
 # ---------------------------------------
-def main():
-    good_day()
+def main() -> None:
+    """Main function to execute all examples."""
+
+    # Get user input once
+    user_name = get_user_name()
+
+    good_day(user_name)
     show_message()
-    greet("Umesh")
+    greet(user_name)
 
     result = add(10, 20)
-    print("Sum:", result)
+    print(f"Sum: {result}")
 
     country_name()
     country_name("USA")
 
     print("\nSquares from 1 to 5:")
     for i in range(1, 6):
-        print(square(i))
+        print(f"{i}² = {square(i)}")
 
-    print("\nMultiplication:", multiply(4, 5))
+    print(f"\nMultiplication: {multiply(4, 5)}")
 
 
 # Run the program
