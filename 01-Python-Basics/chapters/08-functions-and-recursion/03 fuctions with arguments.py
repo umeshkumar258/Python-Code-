@@ -1,7 +1,14 @@
+"""
+Function Demonstration Program
+Author: Umesh
+Description: Shows functions with parameters, return values, and exception handling
+"""
+
+
 # ---------------------------------------
 # 1. Function with parameters (no return)
 # ---------------------------------------
-def good_day(name, ending):
+def greet_user(name: str, ending: str) -> None:
     """Greets the user"""
     print(f"Good Day {name}")
     print(ending)
@@ -10,7 +17,7 @@ def good_day(name, ending):
 # ---------------------------------------
 # 2. Function with return value
 # ---------------------------------------
-def good_day_with_status(name, ending, extra=""):
+def greet_with_status(name: str, ending: str, extra: str = "") -> str:
     """Greets the user and returns status"""
     print(f"Good Day {name} {extra}")
     print(ending)
@@ -20,34 +27,47 @@ def good_day_with_status(name, ending, extra=""):
 # ---------------------------------------
 # 3. Function to add two numbers
 # ---------------------------------------
-def add_numbers(num1, num2):
+def add_numbers(num1: float, num2: float) -> float:
     """Returns the sum of two numbers"""
     return num1 + num2
 
 
 # ---------------------------------------
-# 4. Main Program
+# 4. Helper function for safe input
 # ---------------------------------------
-def main():
-
-    # Greeting examples
-    good_day("Umesh", "Thanks")
-    good_day("Harry", "Thank you")
-
-    status = good_day_with_status("Umesh", "Thanks", "🔥")
-    print("Function returned:", status)
-
-    # Loop with input + exception handling
-    for i in range(3):
+def get_number(prompt: str) -> float:
+    """Safely gets a number from the user"""
+    while True:
         try:
-            num1 = int(input("\nEnter first number: "))
-            num2 = int(input("Enter second number: "))
-
-            result = add_numbers(num1, num2)
-            print("The result is:", result)
-
+            return float(input(prompt))
         except ValueError:
-            print("❌ Invalid input. Please enter valid integers.")
+            print("❌ Invalid input. Please enter a valid number.")
+
+
+# ---------------------------------------
+# 5. Main Program
+# ---------------------------------------
+def main() -> None:
+    """Main execution function"""
+
+    print("🔹 Greeting Examples\n")
+
+    greet_user("Umesh", "Thanks")
+    greet_user("Harry", "Thank you")
+
+    status = greet_with_status("Umesh", "Thanks", "🔥")
+    print(f"Function returned: {status}\n")
+
+    print("🔹 Addition Program\n")
+
+    for i in range(3):
+        print(f"--- Calculation {i + 1} ---")
+
+        num1 = get_number("Enter first number: ")
+        num2 = get_number("Enter second number: ")
+
+        result = add_numbers(num1, num2)
+        print(f"✅ Result: {result}\n")
 
 
 # Run the program
