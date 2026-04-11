@@ -1,6 +1,5 @@
-# List containing different types of items
 items = [4, "umesh", 38, 383, "harry"]
 
-# Loop through each element in the list
-for item in items:
-    print(f"Item: {item}")
+# Start=1 makes the human-readable count begin at 1 instead of 0
+for index, item in enumerate(items, start=1):
+    print(f"Position {index}: {item}")
