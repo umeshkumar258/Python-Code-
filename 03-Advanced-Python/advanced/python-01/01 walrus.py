@@ -1,5 +1,7 @@
-# Python Walrus Operator (:=) - All in One Example
+# Python Walrus Operator (:=) - Improved Version
 # Requires Python 3.8+
+
+from functools import reduce
 
 # -------------------------------
 # 1. Length checking
@@ -7,55 +9,68 @@
 numbers = [1, 2, 3, 4, 5]
 
 if (n := len(numbers)) > 3:
-    print(f"List is too long ({n} elements), expected ≤ 3")
+    print(f"⚠️ List is too long ({n} elements), expected ≤ 3")
+else:
+    print(f"✅ List length is acceptable ({n} elements)")
 
 
 # -------------------------------
 # 2. Input validation
 # -------------------------------
-if (name := input("\nEnter your name: ").strip()):
-    print(f"Hello, {name}")
+name = input("\nEnter your name: ").strip()
+
+if name:
+    print(f"👋 Hello, {name}")
 else:
-    print("Name cannot be empty")
+    print("❌ Name cannot be empty")
 
 
 # -------------------------------
-# 3. While loop usage
+# 3. While loop with safe input
 # -------------------------------
 print("\nEnter numbers (0 to stop):")
-while (num := int(input("Enter number: "))) != 0:
-    print(f"You entered: {num}")
+
+while True:
+    try:
+        if (num := int(input("Enter number: "))) == 0:
+            print("🛑 Stopped by user")
+            break
+        print(f"➡️ You entered: {num}")
+    except ValueError:
+        print("❌ Please enter a valid integer!")
 
 
 # -------------------------------
-# 4. File-like example (simulation)
+# 4. Data check example
 # -------------------------------
 data = "Hello Python"
 
 if (content := data):
-    print("\nData found:", content)
+    print(f"\n📄 Data found: {content}")
+else:
+    print("❌ No data found")
 
 
 # -------------------------------
-# 5. Maximum using walrus + reduce
+# 5. Maximum value (cleaner way)
 # -------------------------------
-from functools import reduce
-
 values = [10, 45, 23, 99, 67]
 
-maximum = reduce(lambda x, y: x if x > y else y, values)
-
-print("\nMaximum value:", maximum)
+# Using walrus operator
+if values and (maximum := max(values)):
+    print(f"\n🏆 Maximum value: {maximum}")
+else:
+    print("❌ Empty list")
 
 
 # -------------------------------
-# 6. Without walrus (comparison)
+# 6. Comparison without walrus
 # -------------------------------
 length = len(values)
+
 if length > 3:
-    print(f"Values list has {length} elements")
-
+    print(f"📊 Values list has {length} elements")
 else:
-    print("it less than 3")
+    print("📊 List has 3 or fewer elements")
 
-print("program over")
+print("\n✅ Program completed successfully")
