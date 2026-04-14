@@ -1,3 +1,5 @@
+# Python Type Hints - Improved Version
+
 # -------------------------------
 # 1. Variable Type Hints
 # -------------------------------
@@ -7,15 +9,16 @@ name: str = "Umesh"
 height: float = 5.8
 is_student: bool = True
 
-print(name, type(name))
-print(age, type(age))
-print(marks,type(marks))
-print(height, type(height))
+print(f"{name} -> {type(name)}")
+print(f"{age} -> {type(age)}")
+print(f"{marks} -> {type(marks)}")
+print(f"{height} -> {type(height)}")
+print(f"{is_student} -> {type(is_student)}")
+
 
 # -------------------------------
 # 2. Function Type Hints
 # -------------------------------
-
 def add(a: int, b: int) -> int:
     return a + b
 
@@ -29,28 +32,21 @@ print(greeting("Umesh"))
 
 
 # -------------------------------
-# 3. List & Dict Type Hints
+# 3. List & Dict Type Hints (Modern)
 # -------------------------------
+marks_list: list[int] = [85, 90, 78]
+student: dict[str, int] = {"math": 90, "science": 88}
 
-from typing import List, Dict
-
-marks: List[int] = [85, 90, 78]
-student: Dict[str, int] = {"math": 90, "science": 88}
-
-print(marks)
+print(marks_list)
 print(student)
 
 
 # -------------------------------
-# 4. Optional Type Hint
+# 4. Optional Type Hint (Modern)
 # -------------------------------
+def get_username(user: str | None) -> str:
+    return user if user else "Guest"
 
-from typing import Optional
-
-def get_username(user: Optional[str]) -> str:
-    if user:
-        return user
-    return "Guest"
 
 print(get_username(None))
 print(get_username("Umesh"))
@@ -59,6 +55,5 @@ print(get_username("Umesh"))
 # -------------------------------
 # 5. Type Hint ≠ Type Enforcement
 # -------------------------------
-
-n: int = "umesh"   # ❌ allowed at runtime, but type checker warns
+n: int = "umesh"   # ⚠️ No runtime error, but static tools will warn
 print(n, type(n))
