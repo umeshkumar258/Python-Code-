@@ -1,44 +1,60 @@
+# Python Match-Case & Dictionary Merge - Improved Version
+
 # -------------------------------
-# MATCH-CASE EXAMPLE
+# 1. MATCH-CASE EXAMPLE
 # -------------------------------
-def http_status(status):
+def http_status(status: int) -> str:
     match status:
         case 200:
-            return "OK"
+            return "✅ OK"
         case 404:
-            return "Not Found"
+            return "❌ Not Found"
         case 500:
-            return "Internal Server Error"
+            return "💥 Internal Server Error"
+        case int() if 100 <= status < 600:
+            return f"ℹ️ Other HTTP Status: {status}"
         case _:
-            return "Unknown Status"
+            return "⚠️ Invalid Status Code"
 
 
-print("HTTP Status Results:")
-print(http_status(200))
-print(http_status(404))
-print(http_status(500))
-print(http_status(66))
+print("🌐 HTTP Status Results:")
+for code in [200, 404, 500, 302, 66]:
+    print(f"{code} → {http_status(code)}")
 
 
 # -------------------------------
-# DICTIONARY MERGE
+# 2. DICTIONARY MERGE
 # -------------------------------
-dict1 = {"a": 4, "b": 9}
-dict2 = {"c": 88, "d": 99}
+dict1: dict[str, int] = {"a": 4, "b": 9}
+dict2: dict[str, int] = {"c": 88, "d": 99}
 
-merged = dict1 | dict2
+merged: dict[str, int] = dict1 | dict2
 
-print("\nMerged Dictionary:")
+print("\n📌 Merged Dictionary:")
 print(merged)
 
 
 # -------------------------------
-# EXTRA: MERGE WITH SAME KEY
+# 3. MERGE WITH SAME KEY
 # -------------------------------
-dict3 = {"a": 100, "e": 50}
-merged2 = dict1 | dict3
+dict3: dict[str, int] = {"a": 100, "e": 50}
+merged2: dict[str, int] = dict1 | dict3
 
-print("\nMerged with same key:")
+print("\n📌 Merged with same key (right wins):")
 print(merged2)
 
-print("program ended")
+
+# -------------------------------
+# 4. SAFE MERGE (WITHOUT OVERWRITE)
+# -------------------------------
+safe_merge = dict1.copy()
+
+for key, value in dict3.items():
+    if key not in safe_merge:
+        safe_merge[key] = value
+
+print("\n🔐 Safe Merge (no overwrite):")
+print(safe_merge)
+
+
+print("\n✅ Program ended successfully")
