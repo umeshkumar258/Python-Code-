@@ -1,17 +1,41 @@
-# -------- FRUIT LIST PROGRAM --------
+# -------- IMPROVED FRUIT LIST PROGRAM --------
+
+def get_fruits(count):
+    fruits = []
+    for i in range(count):
+        while True:
+            fruit = input(f"Enter fruit {i + 1}: ").strip()
+            if fruit:  # Avoid empty input
+                fruits.append(fruit.capitalize())
+                break
+            else:
+                print("⚠️ Please enter a valid fruit name.")
+    return fruits
+
+
+def display_fruits(fruits):
+    print("\n📋 Your Fruit List:")
+    for i, fruit in enumerate(fruits, start=1):
+        print(f"{i}. {fruit}")
+
 
 def fruit_list():
-    fruits = []
-
     print("🍎 Fruit List Program")
-    print("-" * 25)
+    print("-" * 30)
 
-    for i in range(5):
-        fruit = input(f"Enter fruit {i+1}: ")
-        fruits.append(fruit)
+    try:
+        count = int(input("How many fruits do you want to enter? "))
+        if count <= 0:
+            print("❌ Please enter a number greater than 0.")
+            return
+    except ValueError:
+        print("❌ Invalid input. Please enter a number.")
+        return
 
-    print("\n📋 Fruits List:")
-    print(fruits)
+    fruits = get_fruits(count)
+    display_fruits(fruits)
 
-# Function call
-fruit_list()
+
+# Run the program
+if __name__ == "__main__":
+    fruit_list()
