@@ -1,8 +1,13 @@
-words = {"umesh", "appu", "harry", "babu"}
+def check_person():
+    words = {"umesh", "appu", "harry", "babu"}  # already lowercase
 
-name = input("Enter the name: ").lower()
+    name = input("Enter the name: ").strip().lower()
 
-# Convert set items to lowercase for proper comparison
-words = {w.lower() for w in words}
+    if name in words:
+        print("Good person")
+    else:
+        print("Bad person")
 
-print("Good person" if name in words else "Bad person")
+
+if __name__ == "__main__":
+    check_person()
