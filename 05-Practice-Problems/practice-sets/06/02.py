@@ -1,15 +1,39 @@
-# Taking 3 numbers using list comprehension
-a, b, c = [int(input("Enter your number: ")) for _ in range(3)]
+def get_numbers(count=3):
+    numbers = []
 
-# Calculating average
-average = (a + b + c) / 3
+    for i in range(count):
+        while True:
+            try:
+                num = int(input(f"Enter number {i + 1}: "))
+                numbers.append(num)
+                break
+            except ValueError:
+                print("❌ Please enter a valid integer.")
 
-# Result
-if average > 40:
-    print("He scores good")
-elif average >= 33:
-    print("He is pass")
-else:
-    print("Fail")
+    return numbers
 
-print("Average =", average)
+
+def calculate_result(numbers):
+    average = sum(numbers) / len(numbers)
+
+    if average > 40:
+        result = "He scores good"
+    elif average >= 33:
+        result = "He is pass"
+    else:
+        result = "Fail"
+
+    return average, result
+
+
+def main():
+    numbers = get_numbers()
+    average, result = calculate_result(numbers)
+
+    print("\n📊 Numbers:", numbers)
+    print("📈 Average =", average)
+    print("📢 Result:", result)
+
+
+if __name__ == "__main__":
+    main()
