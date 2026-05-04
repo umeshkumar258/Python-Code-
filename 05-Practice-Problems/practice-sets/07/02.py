@@ -1,5 +1,5 @@
 names = ["Harry", "Soham", "Sachin", "Rahul"]
 
-for name in names:
-    if name.startswith("S"):
-        print("Good morning", name)
+for n in names:
+    if n[0] == "S":
+        print("Good morning", n)
