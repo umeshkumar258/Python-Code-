@@ -1,26 +1,11 @@
-# --------------------------------
-# SUM OF N NATURAL NUMBERS
-# --------------------------------
+# Sum of N natural numbers
 
-# -------- USING WHILE LOOP --------
 n = int(input("Enter the number: "))
 
-i = 0
-total = 0
+# Using formula (best way)
+total = n * (n + 1) // 2
+print("Sum using formula:", total)
 
-while i <= n:
-    total += i
-    i += 1
-
-print("Sum using while loop:", total)
-
-
-# -------- USING FOR LOOP --------
-n = int(input("\nEnter the number again: "))
-
-total = 0
-
-for i in range(n + 1):   # 0 to n
-    total += i
-
-print("Sum using for loop:", total)
+# Using for loop
+total = sum(range(n + 1))
+print("Sum using loop:", total)
