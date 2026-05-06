@@ -1,19 +1,19 @@
-# Normal print (new line after each print)
+# Default print -> moves to next line
 print("a")
 print("b")
 
-# Using end=""
+# end="" -> stays on same line
 print("c", end="")
 print("d")
 
-# Using end with space
+# end=" " -> adds space instead of new line
 print("e", end=" ")
 print("f")
 
-# Using sep
+# sep -> separates multiple values
 print("g", "h", "i", sep="-")
 
-# Combining end and sep
+# Using both sep and end together
 print("j", "k", sep="*", end=" ")
 print("l")
 
