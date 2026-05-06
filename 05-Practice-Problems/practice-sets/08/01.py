@@ -1,14 +1,5 @@
-def greatest(numbers):
-    return max(numbers)
+# Take 3 numbers as input
+numbers = [float(input(f"Enter number {i + 1}: ")) for i in range(3)]
 
-
-# Taking input from the user
-nums = []
-for i in range(3):
-    num = float(input(f"Enter number {i + 1}: "))
-    nums.append(num)
-
-# Finding the greatest number
-result = greatest(nums)
-
-print(f"The greatest number is: {result}")
+# Print the greatest number
+print("The greatest number is:", max(numbers))
