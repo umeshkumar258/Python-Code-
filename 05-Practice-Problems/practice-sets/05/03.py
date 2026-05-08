@@ -1,47 +1,51 @@
-# Creating a set with mixed data types
-a = {'66', 66}
+# -------- SET OPERATIONS PROGRAM --------
+
+# Mixed data type set
+a = {"66", 66}
 
 print("Set a:", a)
-print("Type of a:", type(a))
-print("Length of a:", len(a))   # Number of unique elements
+print("Length:", len(a))
 
-print("-" * 40)
+print("-" * 30)
 
-# Creating an empty set (IMPORTANT)
-s = set()   # {} creates an empty dictionary, not a set
+# Empty set
+numbers = set()
 
-print("Empty set s:", s)
-print("Type of s:", type(s))
+print("Empty set:", numbers)
+print("Type:", type(numbers))
 
-print("-" * 40)
+print("-" * 30)
 
-# Adding elements to a set
-s.add(10)
-s.add(20)
-s.add(20)   # Duplicate values are ignored
+# Adding elements
+numbers.add(10)
+numbers.add(20)
+numbers.add(20)   # Duplicate ignored
 
-print("Set s after adding elements:", s)
+print("After add():", numbers)
 
-print("-" * 40)
+print("-" * 30)
 
-# Adding multiple elements
-s.update([30, 40, 50])
-print("Set s after update:", s)
+# Adding multiple values
+numbers.update([30, 40, 50])
 
-print("-" * 40)
+print("After update():", numbers)
+
+print("-" * 30)
 
 # Removing elements
-s.remove(20)        # Removes 20 (error if not found)
-s.discard(100)      # No error even if element not present
+numbers.remove(20)
+numbers.discard(100)   # No error if value not found
 
-print("Set s after removal:", s)
+print("After removal:", numbers)
 
-print("-" * 40)
+print("-" * 30)
 
-# Set operations
+# Another set
 b = {30, 40, 60}
 
 print("Set b:", b)
-print("Union:", s.union(b))
-print("Intersection:", s.intersection(b))
-print("Difference (s - b):", s.difference(b))
+
+# Set operations
+print("Union:", numbers | b)
+print("Intersection:", numbers & b)
+print("Difference:", numbers - b)
