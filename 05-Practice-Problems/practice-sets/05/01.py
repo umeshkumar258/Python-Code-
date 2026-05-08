@@ -1,21 +1,22 @@
 # -------- DICTIONARY LOOKUP PROGRAM --------
 
 def dictionary_lookup():
-    words = {
+
+    dictionary = {
         "appu": "umesh",
         "harry": "code",
         "kannada": "love"
     }
 
-    print("📘 Dictionary Lookup")
-    print("-" * 30)
+    word = input("Enter a word: ").lower()
 
-    a = input("Enter the word: ").lower()
+    # get() avoids using if-else
+    meaning = dictionary.get(word)
 
-    if a in words:
-        print(f"✅ Meaning: {words[a]}")
+    if meaning:
+        print("Meaning:", meaning)
     else:
-        print("❌ Word not found in dictionary.")
+        print("Word not found")
 
 # Function call
 dictionary_lookup()
