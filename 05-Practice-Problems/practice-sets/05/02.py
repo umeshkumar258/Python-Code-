@@ -1,17 +1,14 @@
 # -------- SET INPUT PROGRAM --------
 
 def set_demo():
-    s = set()
 
-    print("📘 Set Program (Unique Numbers)")
-    print("-" * 35)
+    numbers = set()
 
     for i in range(5):
-        n = int(input(f"Enter number {i+1}: "))
-        s.add(n)
+        num = int(input(f"Enter number {i + 1}: "))
+        numbers.add(num)
 
-    print("\n📋 Set Elements:")
-    print(s)
+    print("\nUnique numbers:", numbers)
 
 # Function call
 set_demo()
