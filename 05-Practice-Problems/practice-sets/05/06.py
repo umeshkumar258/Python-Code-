@@ -1,27 +1,22 @@
-# ---------- DICTIONARY CREATION ----------
+# Create empty dictionary
 d = {}
 
-print("Enter name and language details")
+print("Enter 5 name and language pairs")
 print("-" * 35)
 
-# ---------- INPUT USING LOOP ----------
+# Taking input
 for i in range(5):
-    name = input(f"Enter name {i+1}: ").strip()
-    language = input(f"Enter language {i+1}: ").strip()
+    name = input("Enter name: ")
+    language = input("Enter language: ")
 
-    # Check for duplicate name
-    if name in d:
-        print("⚠ Name already exists. Value will be updated.")
-
-    d[name] = language
+    d[name] = language   # Adds or updates value
     print()
 
-# ---------- OUTPUT ----------
+# Display dictionary
 print("-" * 35)
 print("Final Dictionary:")
 
-for name, language in d.items():
-    print(f"{name} : {language}")
+for key, value in d.items():
+    print(key, ":", value)
 
-print("\nType of d:", type(d))
-print("Total entries:", len(d))
+print("\nTotal entries:", len(d))
