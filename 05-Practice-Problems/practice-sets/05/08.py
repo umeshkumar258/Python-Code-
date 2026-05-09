@@ -1,11 +1,20 @@
-# Create an empty dictionary
+# Create empty dictionary
 d = {}
 
-# Take input two times using a loop
-for i in range(2):
-    name = input("Enter the name: ")
-    language = input("Enter the language: ")
-    d[name] = language   # Direct assignment is better than update()
+# Ask number of entries
+n = int(input("How many entries? "))
 
-# Print the dictionary
-print(d)
+# Take input from user
+for i in range(n):
+    print(f"\nEntry {i+1}")
+
+    name = input("Enter name: ").strip()
+    language = input("Enter favorite language: ").strip()
+
+    d[name] = language
+
+# Display dictionary
+print("\nFinal Dictionary")
+
+for name, language in d.items():
+    print(f"{name} : {language}")
