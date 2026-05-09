@@ -1,2 +1,2 @@
-s = set()
-print(s, type(s))
+new = ("new one")
+print(new)
