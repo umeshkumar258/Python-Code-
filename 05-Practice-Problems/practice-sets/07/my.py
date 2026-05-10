@@ -1,14 +1,10 @@
-user = int(input("Enter the number of elements: "))
+n = int(input("Enter the number of elements: "))
 
-l = []
-i = 0
+numbers = []
 
-while i < user:
+for i in range(n):
     num = int(input("Enter element: "))
-    l.append(num)
-    i += 1
+    numbers.append(num)
 
-total = sum(l)
-
-print("List:", l)
-print("Sum of elements:", total)
+print("List:", numbers)
+print("Sum of elements:", sum(numbers))
