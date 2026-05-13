@@ -5,25 +5,26 @@ MIN_SCORE = 1
 MAX_SCORE = 59
 
 
-def get_hiscore() -> int:
-    """Read the high score from file, return 0 if file is missing or empty."""
+def get_hiscore():
+    """Return high score from file."""
     try:
-        with open(HISCORE_FILE, "r") as f:
-            content = f.read().strip()
-            return int(content) if content else 0
+        with open(HISCORE_FILE, "r") as file:
+            return int(file.read().strip())
+
     except (FileNotFoundError, ValueError):
         return 0
 
 
-def save_hiscore(score: int) -> None:
-    """Save the new high score to file."""
-    with open(HISCORE_FILE, "w") as f:
-        f.write(str(score))
+def save_hiscore(score):
+    """Save high score to file."""
+    with open(HISCORE_FILE, "w") as file:
+        file.write(str(score))
 
 
-def game() -> int:
-    """Play a round and return the player's score."""
-    print("You are playing the game...")
+def game():
+    """Play the game."""
+
+    print("🎮 You are playing the game...\n")
 
     score = random.randint(MIN_SCORE, MAX_SCORE)
     hiscore = get_hiscore()
@@ -33,9 +34,9 @@ def game() -> int:
 
     if score > hiscore:
         save_hiscore(score)
-        print(f"🎉 New high score! {score} beats the old record of {hiscore}.")
+        print("\n🎉 New High Score!")
     else:
-        print(f"You need {hiscore - score + 1} more points to beat the high score.")
+        print(f"\nYou need {hiscore - score + 1} more points to beat the high score.")
 
     return score
 
