@@ -2,11 +2,17 @@ class Demo:
     a = 4   # Class attribute
 
 
-o = Demo()
+# Create object
+obj = Demo()
 
-print(o.a)     # Accessing class attribute through object
+# Access class attribute
+print("Before changing:")
+print("Object value:", obj.a)
+print("Class value :", Demo.a)
 
-o.a = 0        # Creating instance attribute
+# Create instance attribute
+obj.a = 0
 
-print(o.a)     # Now accessing instance attribute
-print(Demo.a)  # Accessing class attribute directly from class
+print("\nAfter changing object value:")
+print("Object value:", obj.a)
+print("Class value :", Demo.a)
