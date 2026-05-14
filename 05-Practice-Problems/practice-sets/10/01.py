@@ -1,17 +1,23 @@
 class Programmer:
-    company = "Microsoft"   # Class variable
+    company = "Microsoft"
 
-    def __init__(self, name: str, salary: int, pin: int):
+    def __init__(self, name, salary, pin):
         self.name = name
         self.salary = salary
         self.pin = pin
 
-    def __str__(self):
-        return f"Name: {self.name}, PIN: {self.pin}, Salary: {self.salary}, Company: {self.company}"
+    def show_details(self):
+        print(f"Name: {self.name}")
+        print(f"Salary: {self.salary}")
+        print(f"PIN: {self.pin}")
+        print(f"Company: {Programmer.company}")
+        print()
 
 
-p = Programmer("Umesh", 5_000_000, 583125)
-r = Programmer("Rohan", 5_000_000, 583125)
+# Objects
+p1 = Programmer("Umesh", 5000000, 583125)
+p2 = Programmer("Rohan", 5000000, 583125)
 
-print(p)
-print(r)
+# Display details
+p1.show_details()
+p2.show_details()
