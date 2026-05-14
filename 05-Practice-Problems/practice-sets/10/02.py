@@ -1,19 +1,25 @@
 class Calculator:
-    def __init__(self, n: float):
-        self.n = n
+    def __init__(self, number):
+        self.number = number
 
     def square(self):
-        return self.n ** 2
+        return self.number * self.number
 
     def cube(self):
-        return self.n ** 3
+        return self.number * self.number * self.number
 
     def square_root(self):
-        return self.n ** 0.5
+        return self.number ** 0.5
+
+    def show(self):
+        print("Number:", self.number)
+        print("Square:", self.square())
+        print("Cube:", self.cube())
+        print("Square Root:", self.square_root())
 
 
-a = Calculator(4)
+# Object
+calc = Calculator(4)
 
-print("Square:", a.square())
-print("Cube:", a.cube())
-print("Square Root:", a.square_root())
+# Call method
+calc.show()
