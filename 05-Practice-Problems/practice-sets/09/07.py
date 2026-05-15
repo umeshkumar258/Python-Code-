@@ -3,12 +3,17 @@ line_number = 2
 with open("log.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
 
-    if len(lines) >= line_number:
-        line_text = lines[line_number - 1]
+# Check line exists
+if line_number <= len(lines):
 
-        if "python" in line_text.lower():
-            print(f"Yes, 'python' is present. Line no: {line_number}")
-        else:
-            print("No, 'python' is not present on the given line.")
+    # Get the line
+    line = lines[line_number - 1]
+
+    # Check word
+    if "python" in line.lower():
+        print(f"'python' found in line {line_number}")
     else:
-        print("The file does not have that many lines.")
+        print(f"'python' not found in line {line_number}")
+
+else:
+    print("Line does not exist.")
