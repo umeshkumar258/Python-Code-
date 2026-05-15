@@ -1,19 +1,18 @@
-# List of words to be censored
+# Words to censor
 blocked_words = ["donkey", "ganda", "app"]
 
 file_name = "new.txt"
 
-# Read the file content
+# Read file
 with open(file_name, "r", encoding="utf-8") as file:
     content = file.read()
 
-# Replace each blocked word with stars
+# Censor words
 for word in blocked_words:
-    censored = "#" * len(word)
-    content = content.replace(word, censored)
+    content = content.replace(word, "#" * len(word))
 
-# Write the updated content back to the file
+# Write updated content
 with open(file_name, "w", encoding="utf-8") as file:
     file.write(content)
 
-print("Censoring completed successfully.")
+print("Censoring completed.")
