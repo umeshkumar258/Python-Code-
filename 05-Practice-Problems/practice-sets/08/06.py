@@ -1,7 +1,8 @@
-n = int(input("enter the number:"))
+# Inches to Centimeters Converter
 
+n = int(input("Enter the inches: "))
 
-def iches():
-    print(n*2.54,"iches to cms")
+def inches_to_cm():
+    print(n * 2.54, "cm")
 
-iches()
+inches_to_cm()
