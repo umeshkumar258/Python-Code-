@@ -1,94 +1,51 @@
+# Matrix Multiplication in Simple Way
 
+# Input matrix sizes
+rows1 = int(input("Enter rows of first matrix: "))
+cols1 = int(input("Enter columns of first matrix: "))
 
+rows2 = int(input("Enter rows of second matrix: "))
+cols2 = int(input("Enter columns of second matrix: "))
 
-
-# def calculate_remaining_amount(total, pg, food, travel):
-#     return total - (pg + food + travel)
-
-# total = int(input("Enter the total amount of money"))
-# pg = int(input("Enter the amount of money"))
-# food = int(input("Enter the amount of money"))
-# travel = int(input("Enter the amount of money"))
-
-# amount = calculate_remaining_amount(total, pg, food, travel)
-# print(amount)
-
-
-
-# list = []
-
-# for i in range(3):
-#     num = int(input("Enter a number"))
-#     list.append(num)
-
-# for i in range(len(list)):
-#     if list[i] > list[i-1]:
-#         list[i-1], list[i] = list[i], list[i-1]
-#         print(list[i-1],list[i])
-
-
-# l
-
-
-# list = []
-
-# for i in range(3):
-#     num = int(input("Enter a number"))
-#     list.append(num)
-
-# for i in range(len(list)):
-#     if list[i] > list[i-1]:
-#         list[i-1], list[i] = list[i], list[i-1]
-#         print(list[i-1], list[i])
-
-j# we can not use keywords as varibale names
-
-# rules for naming varialles in python
-
-#1. Variable names must start with a letter or an underscore (_).
-#2. Variable names cannot start with a number.
-#3. Variable names can only contain alphanumeric characters and underscores (A-Z, a-z, 0-9, and _).
-#4. Variable names are case-sensitive (e.g., myVar and myvar are different variables).
-#5. Variable names cannot be Python keywords or reserved words.
-
-
-# Input dimensions for the matrices
-rows1 = int(input("Enter the number of rows for the first matrix: "))
-cols1 = int(input("Enter the number of columns for the first matrix: "))
-rows2 = int(input("Enter the number of rows for the second matrix: "))
-cols2 = int(input("Enter the number of columns for the second matrix: "))
-
-# Ensure matrix multiplication is possible
+# Check multiplication condition
 if cols1 != rows2:
-    print("Matrix multiplication is not possible with these dimensions.")
+    print("Matrix multiplication not possible")
+
 else:
-    # Input the first matrix
-    print("Enter the elements of the first matrix:")
+    # First matrix input
     matrix1 = []
+    print("Enter first matrix:")
+
     for i in range(rows1):
         row = list(map(int, input().split()))
         matrix1.append(row)
 
-    # Input the second matrix
-    print("Enter the elements of the second matrix:")
+    # Second matrix input
     matrix2 = []
+    print("Enter second matrix:")
+
     for i in range(rows2):
         row = list(map(int, input().split()))
         matrix2.append(row)
 
-    # Initialize the product matrix with zeros
-    product = [[0 for _ in range(cols2)] for _ in range(rows1)]
+    # Result matrix
+    result = []
 
-    # Perform matrix multiplication
     for i in range(rows1):
+        row = []
+
         for j in range(cols2):
+            total = 0
+
             for k in range(cols1):
-                product[i][j] += matrix1[i][k] * matrix2[k][j]
+                total += matrix1[i][k] * matrix2[k][j]
 
-    # Print the resulting product matrix
-    print("The product of the matrices is:")
-    for row in product:
-        print(" ".join(map(str, row)))
+            row.append(total)
 
+        result.append(row)
 
-print("i am back")
+    # Print result
+    print("Result Matrix:")
+
+    for row in result:
+        print(row)
