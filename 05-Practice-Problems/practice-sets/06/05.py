@@ -1,8 +1,11 @@
+# Tuple of names
 names = ("umesh", "appu", "babu", "harry")
 
-name = input("Enter the name: ").lower()
+# User input
+name = input("Enter a name: ").lower()
 
+# Checking name
 if name in names:
-    print("Yes, it is there")
+    print("Name found")
 else:
-    print("No, it is not there")
+    print("Name not found")
