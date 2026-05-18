@@ -1,16 +1,18 @@
+# Taking marks input
 marks = int(input("Enter the marks: "))
 
-if 90 < marks <= 100:
+# Checking grade
+if marks >= 90 and marks <= 100:
     print("Excellent")
 
-elif 80 < marks <= 90:
-    print("A")
+elif marks >= 80:
+    print("Grade A")
 
-elif 70 < marks <= 80:
-    print("B")
+elif marks >= 70:
+    print("Grade B")
 
-elif 60 < marks <= 70:
-    print("C")
+elif marks >= 60:
+    print("Grade C")
 
 else:
-    print("D")
+    print("Grade D")
