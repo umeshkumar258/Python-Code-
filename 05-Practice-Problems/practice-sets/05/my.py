@@ -1,48 +1,35 @@
-# --------------------------------
-# ALL IN ONE SET PROGRAM
-# --------------------------------
+# -------------------------------
+# Simple Set Program
+# -------------------------------
 
 # Creating an empty set
-s = set()
+numbers = set()
 
-# Taking input from the user
+# Taking 5 inputs from user
 for i in range(5):
-    num = int(input("Enter the number: "))
-    s.add(num)
+    num = int(input("Enter a number: "))
+    numbers.add(num)
 
-# Display set
-print("\nSet elements:")
-print(s)
+# Displaying set
+print("\nSet:", numbers)
 
-# --------------------------------
 # Adding element
-# --------------------------------
-s.add(100)
-print("\nAfter adding 100:")
-print(s)
+numbers.add(100)
+print("\nAfter adding 100:", numbers)
 
-# --------------------------------
 # Removing element
-# --------------------------------
-s.remove(100)
-print("\nAfter removing 100:")
-print(s)
+numbers.remove(100)
+print("After removing 100:", numbers)
 
-# --------------------------------
-# Checking membership
-# --------------------------------
-print("\nIs 10 present in set?", 10 in s)
+# Checking element
+print("\nIs 10 present?", 10 in numbers)
 
-# --------------------------------
 # Length of set
-# --------------------------------
-print("Total elements:", len(s))
+print("Total elements:", len(numbers))
 
-# --------------------------------
-# Important notes
-# --------------------------------
-print("\nImportant Points:")
-print("1. Sets do not allow duplicate values")
-print("2. Sets are unordered")
-print("3. Sets store only immutable elements")
-print("4. Empty set is created using set()")
+# Important Notes
+print("\nImportant Notes:")
+print("- Sets do not allow duplicate values")
+print("- Sets are unordered")
+print("- Sets store immutable values only")
+print("- Empty set is created using set()")
