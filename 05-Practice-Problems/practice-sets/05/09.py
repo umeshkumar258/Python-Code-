@@ -1,41 +1,27 @@
 # -------------------------------
-# SET EXAMPLE - ALL IN ONE
+# Simple Set Example
 # -------------------------------
 
-# ❌ This is NOT possible because lists are mutable
-# s = {8, 7, 12, "Harry", [1, 2]}
-
-# ✅ Correct code (using tuple instead of list)
+# Creating a set
+# Use tuple instead of list because sets store only immutable values
 s = {8, 7, 12, "Harry", (1, 2)}
 
-print("Set elements:")
-print(s)
+print("Original Set:", s)
 
-# -------------------------------
-# Adding elements to set
-# -------------------------------
+# Adding an element
 s.add(100)
-print("\nAfter adding 100:")
-print(s)
+print("\nAfter adding 100:", s)
 
-# -------------------------------
-# Removing elements
-# -------------------------------
+# Removing an element
 s.remove(7)
-print("\nAfter removing 7:")
-print(s)
+print("\nAfter removing 7:", s)
 
-# -------------------------------
 # Set properties
-# -------------------------------
-print("\nSet properties:")
-print("Length of set:", len(s))
-print("Is 12 in set?", 12 in s)
+print("\nLength of set:", len(s))
+print("Is 12 present?", 12 in s)
 
-# -------------------------------
-# Important notes
-# -------------------------------
+# Important Notes
 print("\nImportant Notes:")
-print("• Sets do not allow duplicate values")
-print("• Sets are unordered")
-print("• Sets store only immutable elements")
+print("- Sets do not allow duplicates")
+print("- Sets are unordered")
+print("- Sets store immutable elements only")
