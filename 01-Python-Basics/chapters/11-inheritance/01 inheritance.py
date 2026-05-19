@@ -1,8 +1,5 @@
-# ---------------------------------------
-# PARENT CLASS
-# ---------------------------------------
+# Parent Class
 class Animal:
-    """Base class for all animals"""
 
     def __init__(self, name):
         self.name = name
@@ -10,36 +7,17 @@ class Animal:
     def speak(self):
         return "Animal sound"
 
-    def info(self):
-        return f"I am an animal named {self.name}"
 
-
-# ---------------------------------------
-# CHILD CLASS (Inheritance)
-# ---------------------------------------
+# Child Class
 class Dog(Animal):
-    """Dog class inheriting from Animal"""
-
-    def __init__(self, name, breed=None):
-        super().__init__(name)   # call parent constructor
-        self.breed = breed
 
     def speak(self):
         return "Woof!"
 
-    def info(self):
-        base_info = super().info()
-        return f"{base_info} and I am a Dog"
 
+# Object Creation
+dog1 = Dog("Buddy")
 
-# ---------------------------------------
-# OBJECT CREATION
-# ---------------------------------------
-my_dog = Dog("Buddy", "Labrador")
-
-# ---------------------------------------
-# OUTPUT
-# ---------------------------------------
-print("Name :", my_dog.name)
-print("Sound:", my_dog.speak())
-print("Info :", my_dog.info())
+# Output
+print("Name :", dog1.name)
+print("Sound:", dog1.speak())
