@@ -1,38 +1,33 @@
 def number_operations():
-    print("📘 Number Operations Program")
-    print("-" * 30)
 
     while True:
         try:
-            a = int(input("Enter a number: "))
+            n = int(input("Enter a number: "))
 
-            # Calculations
-            square1 = a ** 2
-            square2 = a * a
-            cube = a ** 3
-            is_even = (a % 2 == 0)
+            print("\n--- RESULTS ---")
+            print("Square =", n * n)
+            print("Cube   =", n ** 3)
 
-            print("\n📊 Results")
-            print(f"Square (using **): {square1}")
-            print(f"Square (using * ): {square2}")
-            print(f"Cube            : {cube}")
-            print(f"Even Number?    : {'Yes' if is_even else 'No'}")
+            # Even or Odd
+            if n % 2 == 0:
+                print("Even Number")
+            else:
+                print("Odd Number")
 
-            # Extra features
-            print(f"Absolute value  : {abs(a)}")
+            print("Absolute Value =", abs(n))
 
-            if a < 0:
-                print("⚠️ Note: Negative number entered")
+            if n < 0:
+                print("Negative number entered")
 
         except ValueError:
-            print("\n❌ Error: Please enter a valid integer.")
+            print("Invalid input! Enter integers only.")
 
-        # Repeat option
-        choice = input("\nDo you want to continue? (y/n): ").lower()
-        if choice != 'y':
-            print("👋 Program Ended")
+        choice = input("\nContinue? (y/n): ").lower()
+
+        if choice != "y":
+            print("Program Ended")
             break
 
 
-# Function call
+# Function Call
 number_operations()
