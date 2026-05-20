@@ -1,33 +1,33 @@
-def power_of_number():
-    print("🔢 Power Calculator")
-    print("-" * 30)
+def power_calculator():
 
     while True:
         try:
-            a = int(input("Enter base number (a): "))
-            b = int(input("Enter power (b): "))
+            a = int(input("Enter base number: "))
+            b = int(input("Enter power: "))
 
             result = a ** b
 
-            print("\n📊 Result")
-            print(f"{a}^{b} = {result}")
+            print(f"\nResult: {a}^{b} = {result}")
 
-            # Extra info
-            print(f"Base is {'Even' if a % 2 == 0 else 'Odd'}")
+            # Even or Odd
+            if a % 2 == 0:
+                print("Base is Even")
+            else:
+                print("Base is Odd")
 
-            # Warning for large numbers
-            if result > 1_000_000:
-                print("⚠️ Result is a very large number!")
+            # Large number check
+            if result > 1000000:
+                print("Large Number!")
 
         except ValueError:
-            print("\n❌ Error: Please enter valid integers.")
+            print("Invalid input! Enter integers only.")
 
-        # Continue option
-        choice = input("\nDo you want to calculate again? (y/n): ").lower()
-        if choice != 'y':
-            print("👋 Exiting Calculator. Thank you!")
+        choice = input("\nCalculate again? (y/n): ").lower()
+
+        if choice != "y":
+            print("Program Ended")
             break
 
 
-# Function call
-power_of_number()
+# Function Call
+power_calculator()
