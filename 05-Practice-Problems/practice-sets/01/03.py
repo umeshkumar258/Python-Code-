@@ -1,28 +1,29 @@
 import pyttsx3
 
 
-def speak_text(text, rate=160, volume=1.0, voice_index=0):
+def speak_text(text):
+    # Initialize engine
     engine = pyttsx3.init()
 
-    # Set properties
-    engine.setProperty('rate', rate)
-    engine.setProperty('volume', volume)
+    # Voice settings
+    engine.setProperty("rate", 160)     # Speed
+    engine.setProperty("volume", 1.0)   # Volume (0.0 to 1.0)
 
     # Get available voices
-    voices = engine.getProperty('voices')
-    
-    # Set voice (male/female depending on system)
-    if voices:
-        engine.setProperty('voice', voices[voice_index].id)
+    voices = engine.getProperty("voices")
 
-    # Speak
+    # Select first voice
+    if len(voices) > 0:
+        engine.setProperty("voice", voices[0].id)
+
+    # Speak text
     engine.say(text)
     engine.runAndWait()
 
+    print("✅ Text to Speech Completed")
 
-if __name__ == "__main__":
-    text = "Umesh has come back. Welcome to Python text to speech."
 
-    speak_text(text)
+# Main Program
+text = "Umesh has come back. Welcome to Python text to speech."
 
-    print("✅ Text to Speech completed")
+speak_text(text)
