@@ -1,46 +1,36 @@
-# Store the string
+# Simple String Operations Program
+
 text = "Umesh twinkle twinkle little star 🌟"
 
-# Print original text
-print("Original Text:")
-print(text)
+# Original text
+print("Original Text:", text)
 
-# Length of the string
-print("\nLength of text:", len(text))
+# Length
+print("Length:", len(text))
 
-# Convert to uppercase
-print("\nUppercase:")
-print(text.upper())
+# Uppercase and lowercase
+print("Uppercase:", text.upper())
+print("Lowercase:", text.lower())
 
-# Convert to lowercase
-print("\nLowercase:")
-print(text.lower())
+# Capitalize and title case
+print("Capitalized:", text.capitalize())
+print("Title Case:", text.title())
 
-# Capitalize first letter
-print("\nCapitalized:")
-print(text.capitalize())
+# Replace word
+new_text = text.replace("Umesh", "Hello")
+print("After Replace:", new_text)
 
-# Title case
-print("\nTitle Case:")
-print(text.title())
+# Check word
+print("Contains 'twinkle'?", "twinkle" in text)
 
-# Replace a word
-print("\nAfter Replacement:")
-print(text.replace("Umesh", "Hello"))
+# Split into words
+words = text.split()
 
-# Check if a word exists
-word = "twinkle"
-print(f"\nDoes the word '{word}' exist?", word in text)
+print("Words:", words)
 
-# Split the string into words
-print("\nWords in the text:")
-print(text.split())
+# Print words line by line
+print("\nWords one by one:")
+for word in words:
+    print(word)
 
-# Print each word on a new line
-print("\nWords printed line by line:")
-for w in text.split():
-    print(w)
-
-# Add a decorative line
 print("\n✨ End of Program ✨")
-print("it is good")
