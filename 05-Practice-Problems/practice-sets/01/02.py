@@ -1,26 +1,33 @@
 def analyze_text(text):
-    print("✨ TEXT ANALYSIS ✨\n")
+    print("\n✨ TEXT ANALYSIS ✨\n")
 
-    print(f"Original text : {text}")
-    print(f"Length        : {len(text)}")
-    print(f"Uppercase     : {text.upper()}")
-    print(f"Lowercase     : {text.lower()}")
-    print(f"Title case    : {text.title()}")
-    print(f"After replace : {text.replace('umesh', 'hello')}")
-    print(f"Contains 'twinkle': {'Yes' if 'twinkle' in text else 'No'}")
+    # Basic operations
+    print("Original Text :", text)
+    print("Length        :", len(text))
+    print("Uppercase     :", text.upper())
+    print("Lowercase     :", text.lower())
+    print("Title Case    :", text.title())
 
-    # Store split result (avoid repeating)
+    # Replace word
+    new_text = text.replace("umesh", "hello")
+    print("After Replace :", new_text)
+
+    # Check word
+    if "twinkle" in text:
+        print("Contains 'twinkle' : Yes")
+    else:
+        print("Contains 'twinkle' : No")
+
+    # Split words
     words = text.split()
 
-    print(f"Split words   : {words}")
-
-    print("\nWords one by one:")
+    print("\nWords in Text:")
     for word in words:
-        print(f"- {word}")
+        print(word)
 
     print("\n✨ End of Program ✨")
 
 
-# Main
+# Main Program
 text = "umesh twinkle twinkle little star"
 analyze_text(text)
