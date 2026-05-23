@@ -1,9 +1,9 @@
-def rem(list,word):
-    for item in list:
-        list.remove(word)
-        return 1
+def remove_word(names, word):
+    if word in names:
+        names.remove(word)
+    return names
 
 
-list = ["umesh","harry","babu","vijay"]
+names = ["umesh", "harry", "babu", "vijay"]
 
-print(rem(list,"harry"))
+print(remove_word(names, "harry"))
