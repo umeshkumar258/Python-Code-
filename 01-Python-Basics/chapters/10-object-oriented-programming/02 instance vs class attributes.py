@@ -2,43 +2,42 @@
 # CLASS DEFINITION
 # ---------------------------------------
 class Employee:
-    # Class attributes (shared by all objects)
+    # Class attributes
     language = "Python"
     salary = 1200000
 
-    def __init__(self, name=None, language=None):
-        # Instance attributes
+    def __init__(self, name, language=None):
         self.name = name
-        if language is not None:
-            self.language = language   # overrides class attribute for this object
+
+        # Use custom language if given
+        if language:
+            self.language = language
 
 
 # ---------------------------------------
-# OBJECT 1
+# OBJECTS
 # ---------------------------------------
-umesh = Employee(language="Java")
-
-print("Umesh Details:")
-print("Language:", umesh.language)   # Java (instance attribute)
-print("Salary  :", umesh.salary)     # 1200000 (class attribute)
-print()
+umesh = Employee("Umesh", "Java")
+babu = Employee("Babu")
 
 
 # ---------------------------------------
-# OBJECT 2
+# DISPLAY DETAILS
 # ---------------------------------------
-babu = Employee(name="Babu")
+print("Umesh Details")
+print("Name     :", umesh.name)
+print("Language :", umesh.language)
+print("Salary   :", umesh.salary)
 
-print("Babu Details:")
-print("Name    :", babu.name)        # instance attribute
-print("Language:", babu.language)    # Python (class attribute)
-print("Salary  :", babu.salary)      # class attribute
-print()
+print("\nBabu Details")
+print("Name     :", babu.name)
+print("Language :", babu.language)
+print("Salary   :", babu.salary)
 
 
 # ---------------------------------------
-# CLASS ATTRIBUTE ACCESS
+# CLASS ATTRIBUTES
 # ---------------------------------------
-print("Class Attribute Access:")
-print("Employee.language:", Employee.language)
-print("Employee.salary  :", Employee.salary)
+print("\nClass Attributes")
+print("Language :", Employee.language)
+print("Salary   :", Employee.salary)
