@@ -1,18 +1,14 @@
-# ---------------------------------------
-# CLASS DEFINITION
-# ---------------------------------------
 class Employee:
-    """Employee class to store employee details"""
 
-    # Class attributes (defaults)
+    # Class attributes
     default_language = "Python"
     default_salary = 1200000
 
     # Constructor
-    def __init__(self, name, salary=None, language=None):
+    def __init__(self, name, salary=default_salary, language=default_language):
         self.name = name
-        self.salary = salary if salary is not None else Employee.default_salary
-        self.language = language if language is not None else Employee.default_language
+        self.salary = salary
+        self.language = language
 
     # Instance method
     def get_info(self):
@@ -23,21 +19,16 @@ class Employee:
     # Static method
     @staticmethod
     def greet():
-        print("Good morning")
+        print("Good Morning")
 
 
-# ---------------------------------------
-# OBJECT CREATION
-# ---------------------------------------
+# Object creation
 umesh = Employee("Umesh", 130000, "JavaScript")
 
-# ---------------------------------------
-# METHOD CALLS
-# ---------------------------------------
-print("\nUsing object:")
-umesh.get_info()
-Employee.greet()   # better practice
 
-print("\nUsing class:")
-Employee.get_info(umesh)
+# Method calls
+print("Using Object:")
+umesh.get_info()
+
+print("\nStatic Method:")
 Employee.greet()
