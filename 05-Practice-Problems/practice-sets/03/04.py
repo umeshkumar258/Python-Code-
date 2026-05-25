@@ -1,25 +1,23 @@
-# -------- REMOVE DOUBLE SPACE PROGRAM --------
+# Remove Double Spaces Program
 
 def remove_extra_spaces():
-    print("📘 String Space Cleaner")
-    print("-" * 30)
-
-    name = "i am fan  of appu sir"
+    text = "i am fan  of appu sir"
 
     print("Original String:")
-    print(name)
+    print(text)
 
-    # Replacing double space with single space
-    cleaned_name = name.replace("  ", " ")
+    # Remove double spaces
+    cleaned_text = text.replace("  ", " ")
 
     print("\nCleaned String:")
-    print(cleaned_name)
+    print(cleaned_text)
 
-    # Extra check
-    if "  " in cleaned_name:
-        print("❌ Still contains double spaces.")
+    # Check result
+    if "  " not in cleaned_text:
+        print("Double spaces removed successfully.")
     else:
-        print("✔ Double spaces removed successfully.")
+        print("Still contains double spaces.")
+
 
 # Function call
 remove_extra_spaces()
