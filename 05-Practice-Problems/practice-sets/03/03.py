@@ -1,29 +1,25 @@
-# -------- STRING FIND PROGRAM --------
+# String Find Program
 
 def string_find_demo():
-    print("📘 String Find Operation")
-    print("-" * 30)
-
-    name = "i am fan  of appu sir"
+    text = "i am fan of appu sir"
 
     print("Original String:")
-    print(name)
+    print(text)
 
-    # Finding double space
-    double_space_index = name.find("  ")
+    # Find spaces
+    double_space = text.find("  ")
+    single_space = text.find(" ")
 
-    # Finding single space
-    single_space_index = name.find(" ")
+    print("\nResults")
+    print("Double space index :", double_space)
+    print("Single space index :", single_space)
 
-    print("\n📊 Results")
-    print(f"Index of double space  : {double_space_index}")
-    print(f"Index of single space  : {single_space_index}")
-
-    # Extra explanation
-    if double_space_index != -1:
-        print("✔ Double space found in the string.")
+    # Check double space
+    if double_space == -1:
+        print("No double space found.")
     else:
-        print("❌ No double space found.")
+        print("Double space found.")
+
 
 # Function call
 string_find_demo()
