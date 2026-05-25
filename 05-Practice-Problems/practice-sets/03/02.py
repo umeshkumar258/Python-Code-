@@ -1,25 +1,21 @@
-# -------- TEMPLATE LETTER PROGRAM --------
+# Simple Letter Generator
 
 def generate_letter():
-    print("📨 Letter Generator")
-    print("-" * 25)
+    name = input("Enter your name: ")
+    date = input("Enter the date: ")
 
-    name = input("Enter Name: ")
-    date = input("Enter Date: ")
+    letter = f"""
+Dear {name},
 
-    letter = '''
-Dear <|Name|>,
-You are selected!
-<|Date|>
-'''
+Congratulations! You are selected.
 
-    # Replacing placeholders
-    letter = letter.replace("<|Name|>", name)
-    letter = letter.replace("<|Date|>", date)
+Date: {date}
+"""
 
-    print("\n📄 Generated Letter")
+    print("\nGenerated Letter")
     print("-" * 25)
     print(letter)
 
-# Function call
+
+# Calling the function
 generate_letter()
