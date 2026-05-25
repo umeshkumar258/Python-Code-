@@ -1,11 +1,11 @@
-# -------- ESCAPE SEQUENCE DEMO --------
+# Escape Sequence Demo
 
 def escape_sequence_demo():
-    letter = "Dear Harry,\nthis python course is \tnice.\nThanks!"
 
-    print("📄 Formatted Letter")
-    print("-" * 25)
+    letter = "Dear Harry,\nThis Python course is\t nice.\nThanks!"
+
     print(letter)
+
 
 # Function call
 escape_sequence_demo()
