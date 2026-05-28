@@ -1,101 +1,83 @@
-# ---------------------------------------
-# FILE HANDLING – ALL IN ONE
-# ---------------------------------------
+# -----------------------------------
+# FILE HANDLING PROGRAM
+# -----------------------------------
 
 filename = "file.txt"
 
 
-def write_file(file_name):
-    """Write initial content to the file."""
-    try:
-        with open(file_name, "w") as file:
-            file.write("Hello, this is line 1\n")
-            file.write("This is line 2\n")
-            file.write("Python file handling\n")
-        print("✔ File written successfully\n")
-    except Exception as e:
-        print(f"❌ Error while writing file: {e}\n")
+# WRITE TO FILE
+def write_file():
+    with open(filename, "w") as file:
+        file.write("Hello, this is line 1\n")
+        file.write("This is line 2\n")
+        file.write("Python file handling\n")
+
+    print("✔ File written successfully\n")
 
 
-def append_file(file_name):
-    """Append new content to the file."""
-    try:
-        with open(file_name, "a") as file:
-            file.write("This line is appended\n")
-        print("✔ Data appended successfully\n")
-    except Exception as e:
-        print(f"❌ Error while appending file: {e}\n")
+# APPEND TO FILE
+def append_file():
+    with open(filename, "a") as file:
+        file.write("This line is appended\n")
+
+    print("✔ Data appended successfully\n")
 
 
-def read_full_file(file_name):
-    """Read and display the full file content."""
-    try:
-        with open(file_name, "r") as file:
-            data = file.read()
-            print("📄 Full file content:")
-            print(data)
-    except FileNotFoundError:
-        print("❌ File not found\n")
-    except Exception as e:
-        print(f"❌ Error while reading file: {e}\n")
+# READ FULL FILE
+def read_file():
+    with open(filename, "r") as file:
+        print("📄 Full File Content:\n")
+        print(file.read())
 
 
-def read_using_readline(file_name):
-    """Read file line by line using readline()."""
-    try:
-        with open(file_name, "r") as file:
-            print("📌 Reading using readline():")
-            line1 = file.readline()
-            line2 = file.readline()
-            line3 = file.readline()
+# READ USING READLINE
+def read_line():
+    with open(filename, "r") as file:
+        print("📌 Using readline()\n")
 
-            print(line1, type(line1))
-            print(line2, type(line2))
-            print(line3, type(line3))
-    except FileNotFoundError:
-        print("❌ File not found\n")
-    except Exception as e:
-        print(f"❌ Error while using readline(): {e}\n")
+        print(file.readline().strip())
+        print(file.readline().strip())
+        print(file.readline().strip())
 
 
-def read_using_readlines(file_name):
-    """Read all lines into a list using readlines()."""
-    try:
-        with open(file_name, "r") as file:
-            lines = file.readlines()
-            print("\n📌 Reading using readlines():")
-            print(lines, type(lines))
-    except FileNotFoundError:
-        print("❌ File not found\n")
-    except Exception as e:
-        print(f"❌ Error while using readlines(): {e}\n")
+# READ USING READLINES
+def read_lines():
+    with open(filename, "r") as file:
+        lines = file.readlines()
+
+        print("\n📌 Using readlines()")
+        print(lines)
 
 
-def read_using_loop(file_name):
-    """Read file line by line using a loop."""
-    try:
-        print("\n📌 Reading file using for loop:")
-        with open(file_name, "r") as file:
-            for line in file:
-                print(line.strip())
-    except FileNotFoundError:
-        print("❌ File not found\n")
-    except Exception as e:
-        print(f"❌ Error while reading with loop: {e}\n")
+# READ USING LOOP
+def read_loop():
+    with open(filename, "r") as file:
+        print("\n📌 Using for loop")
+
+        for line in file:
+            print(line.strip())
 
 
+# MAIN FUNCTION
 def main():
-    """Main function to run all file handling operations."""
-    write_file(filename)
-    append_file(filename)
-    read_full_file(filename)
-    read_using_readline(filename)
-    read_using_readlines(filename)
-    read_using_loop(filename)
+    try:
+        write_file()
+        append_file()
 
-    print("\n✅ End of file handling program")
+        read_file()
+        read_line()
+        read_lines()
+        read_loop()
+
+        print("\n✅ Program completed successfully")
+
+    except FileNotFoundError:
+        print("❌ File not found")
+
+    except Exception as e:
+        print("❌ Error:", e)
 
 
-# Run the program
+# RUN PROGRAM
 if __name__ == "__main__":
     main()
