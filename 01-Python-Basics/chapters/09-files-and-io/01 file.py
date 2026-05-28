@@ -1,29 +1,24 @@
-"""
-Text file handling example
-"""
+# -----------------------------------
+# SIMPLE FILE HANDLING PROGRAM
+# -----------------------------------
 
-# ---------------------------------------
-# WRITE TO A FILE
-# ---------------------------------------
-with open("file.txt", "w") as f:
-    f.write("Hello, this is written using Python file handling.\n")
+filename = "file.txt"
 
-# ---------------------------------------
-# APPEND TO A FILE
-# ---------------------------------------
-with open("file.txt", "a") as f:
-    f.write("This line is appended at the end.\n")
+# WRITE TO FILE
+with open(filename, "w") as file:
+    file.write("Hello, this is written using Python.\n")
 
-# ---------------------------------------
-# OPEN & READ A FILE
-# ---------------------------------------
+# APPEND TO FILE
+with open(filename, "a") as file:
+    file.write("This line is added later.\n")
+
+# READ FROM FILE
 try:
-    with open("file.txt", "r") as f:
-        data = f.read()
-        print("File content:\n")
-        print(data)
+    with open(filename, "r") as file:
+        print("📄 File Content:\n")
+        print(file.read())
 
 except FileNotFoundError:
-    print("File not found. Please check the file name.")
+    print("❌ File not found.")
 
-print("\nFile operations completed successfully.")
+print("\n✅ File operations completed successfully.")
