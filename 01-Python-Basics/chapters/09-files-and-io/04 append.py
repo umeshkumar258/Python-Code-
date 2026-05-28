@@ -1,12 +1,10 @@
-# ---------------------------------------
-# FILE HANDLING - ALL IN ONE PROGRAM
-# ---------------------------------------
+# -----------------------------------
+# FILE HANDLING - ALL IN ONE
+# -----------------------------------
 
 filename = "file.txt"
 
-# ---------------------------------------
-# 1. WRITE TO FILE (w mode)
-# ---------------------------------------
+# 1. WRITE TO FILE
 with open(filename, "w") as file:
     file.write("Hello, this is line 1\n")
     file.write("This is line 2\n")
@@ -14,54 +12,43 @@ with open(filename, "w") as file:
 
 print("✔ File written successfully\n")
 
-# ---------------------------------------
-# 2. APPEND TO FILE (a mode)
-# ---------------------------------------
-append_text = "\nUmesh is a cute boy"
 
+# 2. APPEND TO FILE
 with open(filename, "a") as file:
-    file.write(append_text)
+    file.write("\nUmesh is a good student.")
 
 print("✔ Text appended successfully\n")
 
-# ---------------------------------------
-# 3. READ ENTIRE FILE
-# ---------------------------------------
+
+# 3. READ FULL FILE
 with open(filename, "r") as file:
-    content = file.read()
-    print("📄 Full file content:")
-    print(content)
+    print("📄 Full File Content:\n")
+    print(file.read())
 
-# ---------------------------------------
-# 4. READ LINE BY LINE USING readline()
-# ---------------------------------------
+
+# 4. READ USING readline()
 with open(filename, "r") as file:
-    print("\n📌 Reading using readline():")
-    line1 = file.readline()
-    line2 = file.readline()
-    line3 = file.readline()
+    print("\n📌 Using readline()\n")
 
-    print(repr(line1), type(line1))
-    print(repr(line2), type(line2))
-    print(repr(line3), type(line3))
+    print(repr(file.readline()))
+    print(repr(file.readline()))
+    print(repr(file.readline()))
 
-# ---------------------------------------
-# 5. READ ALL LINES USING readlines()
-# ---------------------------------------
+
+# 5. READ USING readlines()
 with open(filename, "r") as file:
-    all_lines = file.readlines()
-    print("\n📌 Reading using readlines():")
-    print(all_lines, type(all_lines))
+    lines = file.readlines()
 
-# ---------------------------------------
-# 6. READ USING LOOP (BEST METHOD)
-# ---------------------------------------
-print("\n📌 Reading file using for loop:")
+    print("\n📌 Using readlines()\n")
+    print(lines)
+
+
+# 6. READ USING LOOP
+print("\n📌 Using for loop\n")
+
 with open(filename, "r") as file:
     for line in file:
         print(line.strip())
 
-# ---------------------------------------
-# END OF PROGRAM
-# ---------------------------------------
-print("\n✅ End of file handling program")
+
+print("\n✅ End of program")
