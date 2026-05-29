@@ -1,45 +1,22 @@
-"""
-Author: Umesh Kumar J B
-Description:
-Demonstrates usage of:
-- External third-party modules (pyjokes)
-- Python standard library (datetime)
-- Date calculations
-- Variables and formatted output
-"""
+# Author: Umesh Kumar J B
 
 from datetime import datetime, timedelta
 import pyjokes
 
+# Print a random joke
+print("Random Joke:")
+print(pyjokes.get_joke())
 
-def print_joke():
-    """Fetch and print a random joke using pyjokes."""
-    print("Printing a random joke...\n")
-    joke = pyjokes.get_joke()
-    print(f"Joke: {joke}\n")
+# Current date and time
+now = datetime.now()
+print("\nCurrent Date & Time:", now)
 
+# Custom date
+custom_date = datetime(2024, 12, 7)
+print("Custom Date:", custom_date)
 
-def date_operations():
-    """Demonstrate basic datetime operations."""
-    now = datetime.now()
-    print(f"Current date and time: {now}")
+# Date after 5 days
+future_date = now + timedelta(days=5)
+print("Date After 5 Days:", future_date)
 
-    custom_date = datetime(2024, 12, 7)
-    print(f"Custom date: {custom_date}")
-
-    new_date = now + timedelta(days=5)
-    print(f"Date after 5 days: {new_date}\n")
-
-
-def main():
-    name = "Umesh"
-    print(f"Hello {name}! Welcome to advanced Python learning.\n")
-
-    print_joke()
-    date_operations()
-
-    print("Learning never stops 🚀")
-
-
-if __name__ == "__main__":
-    main()
+print("\nKeep Learning Python! 🚀")
