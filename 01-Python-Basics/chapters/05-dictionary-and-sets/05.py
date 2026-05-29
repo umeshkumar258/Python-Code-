@@ -1,11 +1,11 @@
-# Creating an empty set
-s = set()
+# Create an empty set
+numbers = set()
 
-# Adding elements
-s.add(20)      # Integer added
-s.add(20.0)    # Duplicate value (20 == 20.0) → ignored
-s.add('20')    # String is different → added
+# Add elements
+numbers.add(20)
+numbers.add(20.0)  # Same value as 20, won't be added
+numbers.add("20")  # String, so it will be added
 
-# Display result
-print("Set elements:", s)
-print("Length of set:", len(s))
+# Display the set
+print(numbers)
+print("Length:", len(numbers))
