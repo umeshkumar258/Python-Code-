@@ -2,9 +2,12 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return "<h1>Welcome to the Flask Home Page!</h1>"
+    return """
+    <h1>Welcome to Flask!</h1>
+    <p>This is my first Flask application.</p>
+    """
 
-if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(debug=True)
