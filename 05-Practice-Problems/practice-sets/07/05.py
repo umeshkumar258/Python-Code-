@@ -1,11 +1,8 @@
-# Sum of N natural numbers
+n = int(input("Enter a number: "))
 
-n = int(input("Enter the number: "))
+total = 0
 
-# Using formula (best way)
-total = n * (n + 1) // 2
-print("Sum using formula:", total)
+for i in range(1, n + 1):
+    total += i
 
-# Using for loop
-total = sum(range(n + 1))
-print("Sum using loop:", total)
+print("Sum =", total)
