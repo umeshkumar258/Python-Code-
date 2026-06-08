@@ -1,50 +1,49 @@
-# ---------------------------------------
-# LIST
-# ---------------------------------------
+# List
 numbers = [3, 66, 37, 77, 32]
 
-print("List items:")
-for num in numbers:
-    print(num)
+print("Current List:", numbers)
 
+# Check number
+def check_number():
+    num = int(input("Enter a number to check: "))
 
-# ---------------------------------------
-# FUNCTION → Check number in list
-# ---------------------------------------
-def check_number(lst):
-    try:
-        user_num = int(input("\nEnter a number to check in the list: "))
+    if num in numbers:
+        print("Number found!")
+        print("Index:", numbers.index(num))
+    else:
+        print("Number not found!")
 
-        if user_num in lst:
-            print("✔ It is in the list!")
-            print(f"Found at index: {lst.index(user_num)}")
-        else:
-            print("✘ It is NOT in the list!")
+# Add number
+def add_number():
+    num = int(input("Enter a number to add: "))
+    numbers.append(num)
+    print("Updated List:", numbers)
 
-        print(f"Occurrence count: {lst.count(user_num)}")
+# Menu
+while True:
+    print("\n1. Check Number")
+    print("2. Add Number")
+    print("3. Sort List")
+    print("4. Display List")
+    print("5. Exit")
 
-    except ValueError:
-        print("Please enter a valid number!")
+    choice = input("Enter your choice: ")
 
+    if choice == "1":
+        check_number()
 
-# ---------------------------------------
-# FUNCTION → Add number to list
-# ---------------------------------------
-def add_number(lst):
-    try:
-        new_val = int(input("\nEnter a number to add to the list: "))
-        lst.append(new_val)
-        print("Updated list:", lst)
+    elif choice == "2":
+        add_number()
 
-    except ValueError:
-        print("Invalid input! Please enter a number.")
+    elif choice == "3":
+        print("Sorted List:", sorted(numbers))
 
+    elif choice == "4":
+        print("List:", numbers)
 
-# ---------------------------------------
-# RUN PROGRAM
-# ---------------------------------------
-check_number(numbers)
+    elif choice == "5":
+        print("Program Ended")
+        break
 
-print("\nSorted list:", sorted(numbers))
-
-add_number(numbers)
+    else:
+        print("Invalid Choice!")
