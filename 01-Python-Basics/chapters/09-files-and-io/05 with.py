@@ -1,65 +1,36 @@
-# ---------------------------------------
-# FILE READING - ALL IN ONE
-# ---------------------------------------
+# File Reading Program
 
-filename = "file.txt"
+file = open("file.txt", "r")
 
-# ---------------------------------------
-# 1. READ ENTIRE FILE
-# ---------------------------------------
-with open(filename, "r") as file:
-    print("📄 Full file content:")
-    print(file.read())
+# Read entire file
+print("Full Content:")
+print(file.read())
 
-# ---------------------------------------
-# 2. READ FIRST N CHARACTERS
-# ---------------------------------------
-with open(filename, "r") as file:
-    first_10_chars = file.read(10)
-    print("\n📌 First 10 characters:")
-    print(first_10_chars)
+file.close()
 
-# ---------------------------------------
-# 3. FILE POINTER MOVEMENT
-# ---------------------------------------
-with open(filename, "r") as file:
-    print("\n📌 File pointer example:")
-    first_5 = file.read(5)
-    next_5 = file.read(5)
-    remaining = file.read()
+# Read first 10 characters
+file = open("file.txt", "r")
+print("\nFirst 10 Characters:")
+print(file.read(10))
+file.close()
 
-    print("First 5 chars :", first_5)
-    print("Next 5 chars  :", next_5)
-    print("Remaining     :", remaining)
+# Read line by line
+file = open("file.txt", "r")
+print("\nUsing readline():")
+print(file.readline(), end="")
+print(file.readline(), end="")
+file.close()
 
-# ---------------------------------------
-# 4. READ LINE BY LINE USING readline()
-# ---------------------------------------
-with open(filename, "r") as file:
-    print("\n📌 Reading using readline():")
-    line1 = file.readline()
-    line2 = file.readline()
+# Read all lines
+file = open("file.txt", "r")
+print("\n\nUsing readlines():")
+print(file.readlines())
+file.close()
 
-    print(line1, end="")
-    print(line2, end="")
-
-# ---------------------------------------
-# 5. READ ALL LINES USING readlines()
-# ---------------------------------------
-with open(filename, "r") as file:
-    all_lines = file.readlines()
-    print("\n📌 Reading using readlines():")
-    print(all_lines, type(all_lines))
-
-# ---------------------------------------
-# 6. BEST METHOD: READ USING LOOP
-# ---------------------------------------
-print("\n📌 Reading file using for loop:")
-with open(filename, "r") as file:
+# Best method - for loop
+print("\nUsing for loop:")
+with open("file.txt", "r") as file:
     for line in file:
         print(line.strip())
 
-# ---------------------------------------
-# END OF PROGRAM
-# ---------------------------------------
-print("\n✅ End of file reading program")
+print("\nEnd of Program")
