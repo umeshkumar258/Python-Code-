@@ -1,46 +1,32 @@
-def main():
-    # A list can store different data types
-    items = ["Umesh", "orange", 6, 83, "Harry", 999]
+# List Example
 
-    print("📌 Original List:", items)
-    print("📌 Type of variable:", type(items))
+items = ["Umesh", "orange", 6, 83, "Harry", 999]
 
-    # Indexing
-    print("\n🔹 Indexing")
-    print("First element:", items[0])
-    print("Last element:", items[-1])
+print("Original List:", items)
+print("Type:", type(items))
 
-    # Lists are mutable
-    print("\n🔹 Updating Elements")
-    items[0] = "Appu"
-    print("After updating first element:", items)
+# Indexing
+print("\nFirst element:", items[0])
+print("Last element:", items[-1])
 
-    # List slicing
-    print("\n🔹 Slicing")
-    print("From index 0 to end:", items[0:])
-    print("Full list copy:", items[:])
-    print("Slice [1:3]:", items[1:3])
+# Updating elements
+items[0] = "Appu"
+print("\nAfter updating first element:", items)
 
-    # Append new value
-    print("\n🔹 Append Operation")
-    items.append("UmeshKumar")
-    print("After append:", items)
+# Slicing
+print("\nFull list:", items[:])
+print("Slice [1:3]:", items[1:3])
 
-    # Modify another element
-    items[3] = "Umesh"
-    print("After modifying index 3:", items)
+# Append
+items.append("UmeshKumar")
+print("\nAfter append:", items)
 
-    # Another list example
-    print("\n🔹 Another List Example")
-    friends = ["John", "Doe", "Alice", "Bob"]
-    print("Friends list:", friends)
-    print("Friends slice [1:3]:", friends[1:3])
+# Modify an element
+items[3] = "Umesh"
+print("After modifying index 3:", items)
 
-    print("\n✅ Final Output")
-    print("Items list:", items)
-    print("Friends list:", friends)
+# Another list
+friends = ["John", "Doe", "Alice", "Bob"]
 
-
-# Run the program
-if __name__ == "__main__":
-    main()
+print("\nFriends List:", friends)
+print("Friends Slice [1:3]:", friends[1:3])
