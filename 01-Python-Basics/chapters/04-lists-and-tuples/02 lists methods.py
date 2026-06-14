@@ -1,47 +1,32 @@
-def show(step, lst):
-    print(f"{step:<30} -> {lst}")  # aligned output
+# List Operations
 
+a = [3, 5, 7, 88, 46]
 
-def main():
-    a = [3, 5, 7, 88, 46]
-    show("Original", a)
+print("Original List:", a)
 
-    # Sorted copy (without modifying original)
-    sorted_list = sorted(a)
-    show("Sorted (new list)", sorted_list)
+# Sort
+a.sort()
+print("After sort():", a)
 
-    # Reverse copy
-    reversed_list = list(reversed(a))
-    show("Reversed (new list)", reversed_list)
+# Append
+a.append(88)
+print("After append(88):", a)
 
-    # In-place operations
-    print("\n🔹 In-place Operations")
+# Insert
+a.insert(3, 99)
+print("After insert(3, 99):", a)
 
-    a.sort()
-    show("Sorted (in-place)", a)
+# Pop
+removed = a.pop(2)
+print("Removed element:", removed)
+print("After pop(2):", a)
 
-    a.append(88)
-    show("Append 88", a)
+# Index
+print("Index of 88:", a.index(88))
 
-    a.insert(3, 99)
-    show("Insert 99 at index 3", a)
+# Count
+print("Count of 88:", a.count(88))
 
-    removed_value = a.pop(2)
-    show(f"Pop index 2 (removed {removed_value})", a)
-
-    # Searching
-    print("\n🔹 Searching & Counting")
-
-    try:
-        index_88 = a.index(88)
-        print(f"Index of first 88        -> {index_88}")
-    except ValueError:
-        print("88 not found")
-
-    print(f"Count of 88             -> {a.count(88)}")
-
-    show("Final list", a)
-
-
-if __name__ == "__main__":
-    main()
+# Reverse
+a.reverse()
+print("After reverse():", a)
