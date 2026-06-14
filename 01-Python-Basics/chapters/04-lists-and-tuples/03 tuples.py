@@ -1,55 +1,31 @@
-def show(step, value):
-    print(f"{step:<35} -> {value}")
+# Tuple Example
 
+numbers = (4, 484, 2, 384, 2)
 
-def main():
-    # Tuple declaration
-    numbers = (4, 484, 2, 384, 2)
+print("Tuple:", numbers)
+print("Type:", type(numbers))
+print("Length:", len(numbers))
 
-    show("Type of numbers", type(numbers))
-    show("Tuple values", numbers)
-    show("Length", len(numbers))
+# Accessing elements
+print("\nFirst element:", numbers[0])
+print("Last element:", numbers[-1])
+print("Slice [1:4]:", numbers[1:4])
 
-    # Accessing elements
-    print("\n🔹 Accessing Elements")
-    show("First element", numbers[0])
-    show("Last element", numbers[-1])
-    show("Slice [1:4]", numbers[1:4])
+# Count and Index
+print("\nCount of 2:", numbers.count(2))
+print("Index of 2:", numbers.index(2))
 
-    # Count occurrences
-    print("\n🔹 Count & Index")
-    value = 2
-    show(f"Count of {value}", numbers.count(value))
+# Repetition
+print("\nRepeated tuple:", numbers * 3)
 
-    try:
-        idx = numbers.index(value)
-        show(f"First index of {value}", idx)
-    except ValueError:
-        print(f"{value} not found")
+# Concatenation
+new_tuple = numbers + (100, 200)
+print("After concatenation:", new_tuple)
 
-    # Tuple repetition
-    print("\n🔹 Tuple Operations")
-    repeated = numbers * 3
-    show("Repeated 3 times", repeated)
+# Packing and Unpacking
+a, b, c, d, e = numbers
+print("\nUnpacked values:", a, b, c, d, e)
 
-    # Tuple concatenation
-    new_tuple = numbers + (100, 200)
-    show("After concatenation", new_tuple)
-
-    # Immutability demonstration
-    print("\n🔹 Immutability Check")
-    try:
-        numbers[0] = 10
-    except TypeError:
-        print("Tuples are immutable (cannot modify elements)")
-
-    # Packing & Unpacking
-    print("\n🔹 Packing & Unpacking")
-    a, b, c, d, e = numbers
-    show("Unpacked values", (a, b, c, d, e))
-
-    show("Final tuple", numbers)
-
-
-if __name__ == "__main__":
-    main()
+# Immutability
+# numbers[0] = 10   # Error
+print("\nTuples are immutable (cannot be modified)")
