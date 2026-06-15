@@ -1,45 +1,34 @@
-# Simple All-in-One Python Program
-
-def get_number(message):
-    while True:
-        try:
-            return int(input(message))
-        except ValueError:
-            print("Please enter a valid integer.\n")
-
-
 # Input
-a = get_number("Enter first number: ")
-b = get_number("Enter second number: ")
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
 
-# Basic Operations
-print("\n--- BASIC OPERATIONS ---")
-print("Addition =", a + b)
+# Addition
+print("\nAddition =", a + b)
 
+# Remainder
 if b != 0:
     print("Remainder =", a % b)
 else:
     print("Cannot divide by zero")
 
 # Comparison
-print("\n--- COMPARISON ---")
-print(a, "<", b, "=", a < b)
-print(a, ">", b, "=", a > b)
-print(a, "==", b, "=", a == b)
+print("\nComparison")
+print("a < b :", a < b)
+print("a > b :", a > b)
+print("a == b:", a == b)
 
 # Type Conversion
-print("\n--- TYPE CONVERSION ---")
 x = 48.39
 y = str(x)
 
-print("Original:", x, type(x))
-print("Converted:", y, type(y))
+print("\nType Conversion")
+print("Float :", x, type(x))
+print("String:", y, type(y))
 
 # Even or Odd
-print("\n--- EVEN OR ODD ---")
 total = a + b
 
-print("Sum =", total)
+print("\nSum =", total)
 
 if total % 2 == 0:
     print("Even Number")
