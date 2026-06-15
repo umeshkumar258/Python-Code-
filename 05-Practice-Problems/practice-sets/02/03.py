@@ -1,16 +1,11 @@
 def convert_float_to_string():
-    """Convert float to string and display types"""
-
     a = 48.39
-    c = str(a)
+    b = str(a)
 
-    print("\n--- Type Conversion Program ---")
-    print(f"Original Value       : {a}")
-    print(f"Original Type        : {type(a)}")
+    print("Float Value :", a)
+    print("Data Type   :", type(a))
 
-    print(f"\nAfter Conversion     : {c}")
-    print(f"Converted Data Type  : {type(c)}")
+    print("String Value:", b)
+    print("Data Type   :", type(b))
 
-
-# Run function
 convert_float_to_string()
