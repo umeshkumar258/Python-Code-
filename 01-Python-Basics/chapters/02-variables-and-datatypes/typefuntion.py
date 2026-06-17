@@ -1,14 +1,12 @@
 # Type Conversion Example
 
-a = 84.48          # float value
-b = "838"          # string value
+a = 84.48
+b = "838"
 
-try:
-    converted_value = int(b)      # convert string to integer
-    result = a + converted_value  # add float and int
+c = int(b)      # String to Integer
+result = a + c
 
-    print(f"Converted value: {converted_value} (Type: {type(converted_value)})")
-    print(f"Final result: {result} (Type: {type(result)})")
-
-except ValueError:
-    print("Error: Cannot convert string to integer.")
+print("Converted Value =", c)
+print("Result =", result)
+print("Type of c =", type(c))
+print("Type of result =", type(result))
