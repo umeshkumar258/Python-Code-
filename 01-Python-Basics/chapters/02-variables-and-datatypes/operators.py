@@ -1,38 +1,28 @@
-"""
-OPERATORS IN PYTHON
-"""
+# Python Operators - Simple Example
 
-# -------------------------------
-# 1️⃣ Arithmetic & Assignment Operators
-# -------------------------------
-
+# 1. Arithmetic & Assignment Operators
 num = 3
-num += 8      # num = num + 8
-num *= 6      # num = num * 6
-num /= 29     # division always returns float
 
-print(f"Final value of num: {num}")
-print(f"Type of num: {type(num)}\n")
+num = num + 8
+num = num * 6
+num = num / 29
 
+print("Value of num =", num)
+print()
 
-# -------------------------------
-# 2️⃣ Comparison Operators
-# -------------------------------
+# 2. Comparison Operators
+a = 10
+b = 5
 
-is_equal = (1 == 1)
-print(f"Is 1 equal to 1? -> {is_equal}")
+print("a == b :", a == b)
+print("a != b :", a != b)
+print("a > b  :", a > b)
+print("a < b  :", a < b)
+print("a >= b :", a >= b)
+print("a <= b :", a <= b)
+print()
 
-b = 38
-c = 33
-print(f"Is {b} greater than or equal to {c}? -> {b >= c}")
-
-print("Comparison operators always return Boolean values.\n")
-
-
-# -------------------------------
-# 3️⃣ Logical Operators
-# -------------------------------
-
-print(f"True OR False  -> {True or False}")
-print(f"True AND False -> {True and False}")
-print(f"NOT False      -> {not False}")
+# 3. Logical Operators
+print("True and False =", True and False)
+print("True or False  =", True or False)
+print("not True       =", not True)
