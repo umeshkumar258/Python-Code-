@@ -1,8 +1,8 @@
 text = "umesh is good boy and he is learning python"
 
-name = input("Enter the name: ").lower()
+name = input("Enter a word: ").lower()
 
 if name in text.lower():
-    print("Yes, it is there")
+    print("Found")
 else:
-    print("Not there")
+    print("Not Found")
