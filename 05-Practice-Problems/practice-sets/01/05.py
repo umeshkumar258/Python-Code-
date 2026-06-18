@@ -1,18 +1,11 @@
 import os
 
-# Directory path to list
-directory_path = "/"
+path = "/"
 
-# Check if path exists and is a directory
-if os.path.exists(directory_path) and os.path.isdir(directory_path):
-    print(f"Contents of '{directory_path}':\n")
-    
-    contents = os.listdir(directory_path)
+if os.path.isdir(path):
+    print("Contents of directory:\n")
 
-    if not contents:
-        print("Directory is empty.")
-    else:
-        for item in contents:
-            print(item)
+    for item in os.listdir(path):
+        print(item)
 else:
-    print(f"Directory '{directory_path}' does not exist or is not a directory.")
+    print("Invalid directory")
