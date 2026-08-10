@@ -1,31 +1,22 @@
-# =========================================
-#        TUPLE IMMUTABILITY DEMO
-# =========================================
+# Tuple Immutability Demo
 
-def tuple_immutability_demo():
-    print("📘 Tuple Immutability Demo")
-    print("-" * 35)
+def tuple_demo():
 
-    # Creating a tuple
+    # Create a tuple
     numbers = (10, 20, 30)
 
-    print("✅ Original Tuple :", numbers)
+    print("Original Tuple:", numbers)
 
-    # Trying to modify tuple element
-    print("\n🔄 Trying to change numbers[0] = 100 ...")
-
+    # Try to change the tuple
     try:
-        numbers[0] = 100   # Tuples are immutable
-    except TypeError as error:
-        print("❌ Error Occurred!")
-        print("👉", error)
+        numbers[0] = 100
 
-    # Tuple remains unchanged
-    print("\n✅ Final Tuple (Unchanged) :", numbers)
+    except TypeError:
+        print("❌ Tuples cannot be changed!")
 
-    print("\n📌 Conclusion:")
-    print("Tuples are immutable, meaning their values")
-    print("cannot be changed after creation.")
+    # Tuple is still the same
+    print("Final Tuple:", numbers)
 
-# Function Call
-tuple_immutability_demo()
+
+# Function call
+tuple_demo()
