@@ -1,33 +1,31 @@
-def get_number(prompt):
-    """Safely get an integer from the user."""
+def get_number(message):
     while True:
         try:
-            return int(input(prompt))
+            return int(input(message))
         except ValueError:
-            print("❌ Invalid input. Please enter a valid integer.")
+            print("Please enter a valid number.")
 
 
-def generate_table(n, limit=10):
-    """Generate multiplication table as a list."""
-    return [f"{n} × {i} = {n * i}" for i in range(1, limit + 1)]
+def multiplication_table(number, limit):
+    table = []
 
+    for i in range(1, limit + 1):
+        table.append(f"{number} × {i} = {number * i}")
 
-def display_table(table):
-    """Display the multiplication table."""
-    print("\n📊 Multiplication Table:\n")
-    for line in table:
-        print(line)
+    return table
 
 
 def main():
     print("=== Multiplication Table Generator ===")
 
     number = get_number("Enter a number: ")
-    limit = get_number("Enter range (e.g., 10): ")
+    limit = get_number("Enter the range: ")
 
-    table = generate_table(number, limit)
-    display_table(table)
+    table = multiplication_table(number, limit)
+
+    print("\nMultiplication Table:")
+    for line in table:
+        print(line)
 
 
-if __name__ == "__main__":
-    main()
+main()
