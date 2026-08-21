@@ -3,6 +3,7 @@ def to_fahrenheit(celsius):
 
 
 celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = to_fahrenheit(celsius)
 
-print("Temperature in Fahrenheit:", to_fahrenheit(celsius))
-print("Thanks")
+print("Temperature in Fahrenheit:", fahrenheit)
+print("Thanks!")
