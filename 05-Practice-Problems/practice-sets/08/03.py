@@ -1,12 +1,12 @@
-# Default print -> moves to next line
+# Default print -> moves to the next line
 print("a")
 print("b")
 
-# end="" -> stays on same line
+# end="" -> stays on the same line
 print("c", end="")
 print("d")
 
-# end=" " -> adds space instead of new line
+# end=" " -> adds a space instead of a new line
 print("e", end=" ")
 print("f")
 
