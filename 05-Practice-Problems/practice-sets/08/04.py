@@ -5,5 +5,6 @@ def find_sum(n):
 
 
 number = int(input("Enter the number: "))
+result = find_sum(number)
 
-print("Sum =", find_sum(number))
+print("Sum =", result)
